@@ -1,18 +1,18 @@
 import React from 'react';
-import { Header } from '../layouts/Header/Header';
-import { Hero } from '../core/Hero/Hero';
-import { About } from '../core/About/About';
-import { Team } from '../core/Team/Team';
-import { Donate } from '../core/Donate/Donate';
+import { About } from 'components/core/About/About';
+import { Donate } from 'components/core/Donate/Donate';
+import { Hero } from 'components/core/Hero/Hero';
+import { Team } from 'components/core/Team/Team';
+import { Header } from 'components/layouts/Header/Header';
 
 export const Homepage = () => {
   return (
     <>
-      <Header/>
-      <Hero/>
-      <About/>
-      <Team/>
-      <Donate/>
+      <Header />
+      <Hero />
+      <About />
+      <Team />
+      <Donate />
     </>
-  )
-}
+  );
+};

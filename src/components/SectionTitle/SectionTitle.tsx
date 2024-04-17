@@ -4,9 +4,9 @@ import React from 'react';
 
 type Props = {
   eyebrow: string;
-  title: string
-  sx?: SxProps
-}
+  title: string;
+  sx?: SxProps;
+};
 export const SectionTitle = ({ eyebrow, title, sx }: Props) => {
   return (
     <Box sx={sx}>
@@ -18,11 +18,7 @@ export const SectionTitle = ({ eyebrow, title, sx }: Props) => {
       >
         {eyebrow}
       </Typography>
-      <Typography
-        variant="h2"
-      >
-        {title}
-      </Typography>
+      <Typography variant="h2">{title}</Typography>
     </Box>
-  )
-}
+  );
+};

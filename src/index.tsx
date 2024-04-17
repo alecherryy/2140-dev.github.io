@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// eslint-disable-next-line
 ReactDOM.render(
   <React.StrictMode>
     <App />

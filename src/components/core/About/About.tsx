@@ -23,22 +23,22 @@ export const About = () => {
       <Container size="medium">
         <Box sx={wrapperSx}>
           <Box sx={contentSx}>
-            <img src={Cloud} width={64} alt="Icon of a computing cloud"/>
+            <img src={Cloud} width={64} alt="Icon of a computing cloud" />
             <Typography variant="h5">{ABOUT_WORDING.subtitle}</Typography>
-            {ABOUT_WORDING.paragraphs.map((paragraph) => (
-              <Typography variant="body1">
+            {ABOUT_WORDING.paragraphs.map((paragraph, index) => (
+              <Typography key={index} variant="body1">
                 {paragraph}
               </Typography>
             ))}
           </Box>
           <Box sx={imageSx}>
-            <img src={Artwork} alt="About vector graphic"/>
+            <img src={Artwork} alt="About vector graphic" />
           </Box>
         </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
 const ABOUT_WORDING = {
   eyebrow: '01 — About',
@@ -49,6 +49,5 @@ const ABOUT_WORDING = {
   paragraphs: [
     `We believe in the transformative power of Bitcoin to promote financial independence and privacy. By funding those at the forefront of Bitcoin development, we commit to safeguarding the network’s open-source ethos, enhancing its technological infrastructure, and ensuring its ongoing decentralization.`,
     `Our goal is to catalyze innovation within the Bitcoin ecosystem, making it more accessible, efficient, and secure for everyone, everywhere.`,
-  ]
-  
-}
+  ],
+};

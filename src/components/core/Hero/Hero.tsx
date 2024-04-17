@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { backgroundSx, blurbSx, containerSx, imageSx, leftSx, wrapperSx } from './Hero.styles';
-import { Container } from '../../layouts/Container/Container';
 import Artwork from '../../../images/artwork.svg';
 import Background from '../../../images/background.svg';
 import { Button } from '../Button/Button';
+import { Container } from 'components/layouts/Container/Container';
 
 export const Hero = () => {
   return (
