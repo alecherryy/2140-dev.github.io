@@ -1,5 +1,5 @@
 import { SxProps } from '@mui/material';
-import { colors } from '../../../constants/theme/colors';
+import { colors } from '../../../theme/colors';
 
 export const cardSx: SxProps = {
   alignItems: 'center',
@@ -9,7 +9,7 @@ export const cardSx: SxProps = {
   gap: 6,
   p: 3,
   px: 4,
-}
+};
 export const imageSx: SxProps = {
   alignItems: 'center',
   borderRadius: 80,
@@ -19,11 +19,11 @@ export const imageSx: SxProps = {
   m: 1,
   maxWidth: 80,
   position: 'relative',
-}
+};
 
 export const svgSx: SxProps = {
   position: 'absolute',
-}
+};
 
 export const linkSx: SxProps = {
   alignItems: 'center',
@@ -31,4 +31,4 @@ export const linkSx: SxProps = {
   height: 24,
   justifyContent: 'center',
   width: 24,
-}
+};

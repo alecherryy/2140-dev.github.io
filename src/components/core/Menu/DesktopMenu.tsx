@@ -1,22 +1,9 @@
 import React, { MouseEvent } from 'react';
 import { List, ListItem, Link } from '@mui/material';
 import { itemSx, linkSx, menuSx } from './Menu.styles';
+import { MENU_ITEMS } from 'constants/wording';
 
-const MENU_ITEMS = [
-  {
-    text: 'About',
-    anchor: '#about',
-  },
-  {
-    text: 'Team',
-    anchor: '#team',
-  },
-  {
-    text: 'Donate',
-    anchor: '#donate',
-  },
-];
-export const Menu = () => {
+export const DesktopMenu = () => {
   const handleClick = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
 

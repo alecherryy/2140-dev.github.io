@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Link, List, ListItem, Typography } from '@mui/material';
 import { cardSx, imageSx, linkSx, svgSx } from './TeamMember.styles';
-import { colors } from '../../../constants/theme/colors';
+import { colors } from '../../../theme/colors';
 import Github from '../../../images/icon-github.svg';
 import X from '../../../images/icon-x.svg';
 
@@ -11,39 +11,50 @@ type Props = {
   role: string;
   twitter?: string;
   github?: string;
-}
+};
 export const TeamMember = ({ image, name, role, twitter, github }: Props) => {
   return (
     <Box sx={cardSx}>
       <Box sx={imageSx}>
         <Box sx={svgSx}>
-          <OutlineCircle/>
+          <OutlineCircle />
         </Box>
-        <figure style={{
-          borderRadius: 80,
-          overflow: 'hidden',
-          width: '100%',
-          margin: 0,
-        }}>
-          <img width={80} height={80} src={image} alt={name}/>
+        <figure
+          style={{
+            borderRadius: 80,
+            overflow: 'hidden',
+            height: 80,
+            width: 80,
+            margin: 0,
+          }}
+        >
+          <img
+            width={80}
+            height={80}
+            style={{ objectFit: 'cover' }}
+            src={image}
+            alt={name}
+          />
         </figure>
       </Box>
       <Box>
-        <Typography variant="h6" mb={0.5}>{name}</Typography>
+        <Typography variant="h6" mb={0.5}>
+          {name}
+        </Typography>
         <Typography variant="body2">{role}</Typography>
         {github && twitter && (
           <List sx={{ display: 'flex', gap: 2 }}>
             {github && (
               <ListItem sx={{ p: 0, width: 24 }}>
                 <Link sx={linkSx} target="_blank" href={github}>
-                  <img src={Github} alt="Github icon"/>
+                  <img src={Github} alt="Github icon" />
                 </Link>
               </ListItem>
             )}
             {twitter && (
               <ListItem sx={{ p: 0, width: 24 }}>
                 <Link sx={linkSx} target="_blank" href={twitter}>
-                  <img src={X} alt="X icon"/>
+                  <img src={X} alt="X icon" />
                 </Link>
               </ListItem>
             )}
@@ -51,17 +62,22 @@ export const TeamMember = ({ image, name, role, twitter, github }: Props) => {
         )}
       </Box>
     </Box>
-  )
-}
+  );
+};
 
 const OutlineCircle = () => {
   return (
     <svg width="110" height="110" viewBox="0 0 110 110" fill="none">
-      <circle cx="55" cy="55" r="54.5" style={{
-        stroke: colors.yellow[100],
-        strokeWidth: 1,
-        strokeDasharray: 280,
-      }}/>
+      <circle
+        cx="55"
+        cy="55"
+        r="54.5"
+        style={{
+          stroke: colors.yellow[100],
+          strokeWidth: 1,
+          strokeDasharray: 280,
+        }}
+      />
     </svg>
-  )
-}
+  );
+};

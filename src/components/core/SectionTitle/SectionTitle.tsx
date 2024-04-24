@@ -1,5 +1,5 @@
 import { Box, SxProps, Typography } from '@mui/material';
-import { colors } from '../../constants/theme/colors';
+import { colors } from '../../../theme/colors';
 import React from 'react';
 
 type Props = {

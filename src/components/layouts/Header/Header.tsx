@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { debounce } from 'lodash';
 import { Logo } from '../../core/Logo/Logo';
 import { Box, SxProps } from '@mui/material';
-import { Menu } from '../../core/Menu/Menu';
+import { DesktopMenu } from '../../core/Menu/DesktopMenu';
 import { Container } from '../Container/Container';
-import { colors } from '../../../constants/theme/colors';
+import { colors } from '../../../theme/colors';
 
 const stickySx: SxProps = {
   background: colors.yellow[50],
@@ -60,7 +60,7 @@ export const Header = () => {
         size="large"
       >
         <Logo />
-        <Menu />
+        <DesktopMenu />
       </Container>
     </Box>
   );

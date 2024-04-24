@@ -5,27 +5,34 @@ export const wrapperSx: SxProps = {
   display: 'flex',
   flexDirection: {
     xs: 'column-reverse',
-    md: 'row'
+    md: 'row',
   },
   gap: 6,
   justifyContent: 'space-between',
-}
+};
 
 export const titleSx: SxProps = {
   flexBasis: '100%',
   mb: 6,
   textAlign: 'center',
-  textWrap: 'balance',
-}
+  textWrap: {
+    xs: 'inherit',
+    md: 'balance',
+  },
+};
 
 export const contentSx: SxProps = {
-  flexBasis: 400,
-}
+  flexBasis: {
+    md: 400,
+  },
+};
 
 export const imageSx: SxProps = {
-  flexBasis: 600,
-  
-  'img': {
-    maxWidth: '100%'
-  }
-}
+  flexBasis: {
+    md: 600,
+  },
+
+  img: {
+    maxWidth: { xs: 400, md: '100%' },
+  },
+};

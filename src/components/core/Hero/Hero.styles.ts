@@ -1,11 +1,11 @@
 import { SxProps } from '@mui/material';
-import { colors } from '../../../constants/theme/colors';
+import { colors } from '../../../theme/colors';
 
 export const wrapperSx: SxProps = {
   height: {
-    lg: '100vh'
+    lg: '100vh',
   },
-}
+};
 
 export const containerSx: SxProps = {
   alignItems: 'center',
@@ -14,7 +14,7 @@ export const containerSx: SxProps = {
   justifyContent: 'space-between',
   py: 10,
   position: 'relative',
-}
+};
 
 export const leftSx: SxProps = {
   flexBasis: '50%',
@@ -26,8 +26,8 @@ export const leftSx: SxProps = {
   pt: {
     xs: 10,
     lg: 0,
-  }
-}
+  },
+};
 
 export const backgroundSx: SxProps = {
   position: 'absolute',
@@ -43,20 +43,20 @@ export const backgroundSx: SxProps = {
     position: 'absolute',
     top: 0,
     width: '100vw',
-  }
-}
+  },
+};
 
 export const imageSx: SxProps = {
-  maxWidth: ['70%', '100%'],
+  maxWidth: '100%',
   position: {
-    lg: 'absolute'
+    lg: 'absolute',
   },
   right: 0,
-  zIndex: -1
-}
+  zIndex: -1,
+};
 
 export const blurbSx: SxProps = {
   fontSize: '1.25rem',
   mt: 1,
   maxWidth: 480,
-}
+};
