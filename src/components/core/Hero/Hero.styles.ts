@@ -37,7 +37,7 @@ export const backgroundSx: SxProps = {
   '::after': {
     background: colors.yellow[200],
     content: '""',
-    display: 'block',
+    display: { xs: 'none', lg: 'block' },
     height: '100%',
     left: '99%',
     position: 'absolute',
