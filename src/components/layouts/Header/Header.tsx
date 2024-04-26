@@ -45,11 +45,12 @@ export const Header = () => {
         zIndex: 999,
         transition: 'all 0.2s ease-in',
         ...((isSticky || isMobile) && { position: 'fixed' }),
-        ...(!isMobile && {
-          background: colors.yellow[50],
-          color: colors.primary.main,
-          boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
-        }),
+        ...(!isMobile &&
+          isSticky && {
+            background: colors.yellow[50],
+            color: colors.primary.main,
+            boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
+          }),
       }}
     >
       <Container
