@@ -6,10 +6,11 @@ import {
   wrapperSx,
   buttonSx,
   contentSx,
+  imageWrapperSx,
 } from './Donate.styles';
 import { Container } from '../../layouts/Container/Container';
 import Artwork from '../../../images/donate-artwork.svg';
-import Cloud from '../../../images/cloud-icon.svg';
+import BoxIcon from '../../../images/box-icon.svg';
 import Server from '../../../images/server-icon.svg';
 import { Button } from '../Button/Button';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
@@ -32,11 +33,13 @@ export const Donate = () => {
           }}
         />
         <Box sx={innerSx} id="donate">
-          <Box sx={imageSx}>
-            <img src={Artwork} alt="Donate section graphic" />
+          <Box sx={imageWrapperSx}>
+            <Box sx={imageSx}>
+              <img src={Artwork} alt="Donate section graphic" />
+            </Box>
           </Box>
           <Box sx={contentSx}>
-            <img src={Cloud} height={64} alt="Icon of a computing cloud" />
+            <img src={BoxIcon} height={64} alt="Icon of a computing cloud" />
             <Typography variant="h5">{DONATE_WORDING.donate.title}</Typography>
             <Typography variant="body1">
               {DONATE_WORDING.donate.content}

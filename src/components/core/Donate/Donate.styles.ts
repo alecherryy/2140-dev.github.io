@@ -24,12 +24,29 @@ export const contentSx: SxProps = {
   flexBasis: 450,
 };
 
+export const imageWrapperSx: SxProps = {
+  alignItems: 'center',
+  flexBasis: 'calc(100% - 450px - 4rem)',
+  display: 'flex',
+  justifyContent: {
+    xs: 'flex-end',
+    md: 'center',
+  },
+  height: '100%',
+  minHeight: '100%',
+  position: 'relative',
+};
+
 export const imageSx: SxProps = {
-  flexBasis: 'auto',
   position: {
     md: 'absolute',
   },
-  right: '50%',
+  right: '25%',
+  width: '150%',
+  minWidth: {
+    xs: '150%',
+    md: 'auto',
+  },
 };
 
 export const buttonSx: SxProps = {

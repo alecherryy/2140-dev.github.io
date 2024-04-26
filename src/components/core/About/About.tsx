@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { contentSx, imageSx, titleSx, wrapperSx } from './About.styles';
 import { Container } from '../../layouts/Container/Container';
-import Cloud from '../../../images/cloud-icon.svg';
+import BoxIcon from '../../../images/box-icon.svg';
 import Artwork from '../../../images/about-artwork.svg';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { ABOUT_WORDING } from 'constants/wording';
@@ -24,7 +24,7 @@ export const About = () => {
       <Container size="medium">
         <Box sx={wrapperSx}>
           <Box sx={contentSx}>
-            <img src={Cloud} width={64} alt="Icon of a computing cloud" />
+            <img src={BoxIcon} width={64} alt="Icon of a computing cloud" />
             <Typography variant="h5">{ABOUT_WORDING.subtitle}</Typography>
             {ABOUT_WORDING.paragraphs.map((paragraph, index) => (
               <Typography key={index} variant="body1">
