@@ -1,10 +1,7 @@
 export const colors = {
   primary: {
     dark: '#444444',
-    main: '#212121'
-  },
-  pink: {
-    main: '#FFA8C7',
+    main: '#212121',
   },
   yellow: {
     50: '#FFFBF4',
@@ -12,5 +9,5 @@ export const colors = {
     200: '#EEC12D',
     300: '#EEBA0E',
     400: '#D8A601',
-  }
-}
+  },
+};

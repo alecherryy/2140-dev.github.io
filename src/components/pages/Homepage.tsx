@@ -4,11 +4,14 @@ import { Donate } from 'components/core/Donate/Donate';
 import { Hero } from 'components/core/Hero/Hero';
 import { Team } from 'components/core/Team/Team';
 import { Header } from 'components/layouts/Header/Header';
+import { MenuProvider } from 'providers/MenuProvider/MenuProvider';
 
 export const Homepage = () => {
   return (
     <>
-      <Header />
+      <MenuProvider>
+        <Header />
+      </MenuProvider>
       <Hero />
       <About />
       <Team />

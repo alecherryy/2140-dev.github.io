@@ -1,20 +1,12 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
 import { List, ListItem, Link } from '@mui/material';
-import { itemSx, linkSx, menuSx } from './Menu.styles';
-import { MENU_ITEMS } from 'constants/wording';
+import { itemSx, linkSx, menuSx } from './DesktopMenu.styles';
+import { MenuProps } from 'components/core/Menu/Menu';
 
-export const DesktopMenu = () => {
-  const handleClick = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-
-    document
-      ?.querySelector(id)
-      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
+export const DesktopMenu = ({ items, handleClick }: MenuProps) => {
   return (
     <List sx={menuSx}>
-      {MENU_ITEMS.map((item) => (
+      {items.map((item) => (
         <ListItem key={item.text} sx={itemSx}>
           <Link
             sx={linkSx}

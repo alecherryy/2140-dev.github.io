@@ -1,18 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { debounce } from 'lodash';
 import { Logo } from '../../core/Logo/Logo';
-import { Box, SxProps } from '@mui/material';
-import { DesktopMenu } from '../../core/Menu/DesktopMenu';
+import { Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { Container } from '../Container/Container';
 import { colors } from '../../../theme/colors';
+import { Menu } from 'components/core/Menu/Menu';
 
-const stickySx: SxProps = {
-  background: colors.yellow[50],
-  color: colors.primary.main,
-  boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
-  position: 'fixed',
-};
 export const Header = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isSticky, setIsSticky] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -30,7 +28,6 @@ export const Header = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -47,7 +44,12 @@ export const Header = () => {
         width: '100%',
         zIndex: 999,
         transition: 'all 0.2s ease-in',
-        ...(isSticky && stickySx),
+        ...((isSticky || isMobile) && { position: 'fixed' }),
+        ...(!isMobile && {
+          background: colors.yellow[50],
+          color: colors.primary.main,
+          boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
+        }),
       }}
     >
       <Container
@@ -60,7 +62,7 @@ export const Header = () => {
         size="large"
       >
         <Logo />
-        <DesktopMenu />
+        <Menu isMobile={isMobile} />
       </Container>
     </Box>
   );
