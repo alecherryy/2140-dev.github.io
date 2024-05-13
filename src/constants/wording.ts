@@ -17,33 +17,32 @@ export const MENU_ITEMS = [
 ];
 
 export const HERO_WORDING = {
-  title: `The year was`,
+  title_lhs: `Supporting Bitcoin to`,
+  title_rhs: `and beyond`,
   year: `2140`,
-  blurb: `We are dedicated to advancing Bitcoin through direct support and employment for researchers and developers contributing to its ecosystem.`,
+  blurb: `2140 exists to support Bitcoin research and development by supporting the individual contributors who make all of this possible.`,
   button: `Read more`,
 };
 
 export const ABOUT_WORDING = {
   eyebrow: '01 — About',
-  title: `Supporting Bitcoin <s>projects</s> careers`,
-  content: `Our mission is to empower Bitcoin Core developers through financial support, resources, and a
-            collaborative community.`,
-  subtitle: `We are dedicated to fostering the security, resilience, and progress of the Bitcoin network.`,
+  title: `Building <s>projects</s> careers`,
+  content: ``,
+  subtitle: `Working on Bitcoin is hard enough, making it your full-time job shouldn't be.`,
   paragraphs: [
-    `We believe in the transformative power of Bitcoin to promote financial independence and privacy. By funding those at the forefront of Bitcoin development, we commit to safeguarding the network’s open-source ethos, enhancing its technological infrastructure, and ensuring its ongoing decentralization.`,
-    `Our goal is to catalyze innovation within the Bitcoin ecosystem, making it more accessible, efficient, and secure for everyone, everywhere.`,
+	  `2140 is a non-profit organization dedicated to supporting FOSS contributors by providing stable, full-time employment. Our Amsterdam-based office serves as a hub for collaboration and innovation where open source contributors can continue their work with the security of traditional employment.`,
+`Our focus is on security, resilience, and long-term maintainability. While short term projects are important, we aim to give contributors stability and runway to focus on bigger, multi-year problems. Its also why we focus on mentorship and career growth: we want to ensure that the community of people who understand the Bitcoin protocol on a deep technical level is growing year over year, not shrinking.`,
   ],
 };
 
 export const TEAM_WORDING = {
   eyebrow: '02 — Team',
   title: 'Meet Our Contributors',
-  content: `Comprising visionary Bitcoin Core developers, passionate technologists, and forward-thinking strategists, our
-    team is united by a common goal: to advance and secure the Bitcoin network.`,
+  content: `We are a mix of long-term contributors, researchers, and new faces all united by a common goal: to to support Bitcoin until the last subsidy is mined, and beyond.`,
   team: [
     {
       name: 'josibake',
-      role: 'Bitcoin Core Developer',
+      role: 'Bitcoin Core contributor',
       twitter: 'https://twitter.com/josibake?lang=en',
       github: 'https://github.com/josibake',
       image: Josibake,
@@ -64,7 +63,7 @@ export const DONATE_WORDING = {
   donate: {
     eyebrow: '3.1 — Donate',
     title: `Support the Future of Bitcoin`,
-    content: `Your donation fuels the innovative work of leading Bitcoin researchers and developers, ensuring the growth and security of the ecosystem. With your contribution, we can offer more resources, opportunities, and support to those shaping the future of Bitcoin.`,
+    content: `2140 is not a business: we are a non-profit with 100% of donations being used to provide long-term support to open source contributors. Our aim is to do this sustainably, which is only possible with community support.`,
     button: {
       title: 'Support our mission',
       text: 'Join us in empowering this vital work',
@@ -73,6 +72,6 @@ export const DONATE_WORDING = {
   contact: {
     eyebrow: '3.2 — Contact',
     title: `Get in touch — At 2140, we're always eager to connect`,
-    content: `Whether you're a developer with insights to share, a potential collaborator interested in our mission, or simply curious about our work, your thoughts are invaluable to us. Reach out today to discuss how we can work together to secure and innovate the Bitcoin ecosystem.`,
+    content: `Whether you're a developer with insights to share, a potential collaborator, or simply curious about our work, we'd love to hear from you!`,
   },
 };

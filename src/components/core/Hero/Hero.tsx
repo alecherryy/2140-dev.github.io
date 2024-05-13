@@ -26,10 +26,11 @@ export const Hero = () => {
       <Container size="large" sx={containerSx}>
         <Box sx={leftSx}>
           <Typography variant="h1">
-            {HERO_WORDING.title}{' '}
+            {HERO_WORDING.title_lhs}{' '}
             <Typography variant="h1" component="span" fontWeight={300}>
-              {HERO_WORDING.year}
+              {HERO_WORDING.year}{' '}
             </Typography>
+            {HERO_WORDING.title_rhs}
           </Typography>
           <Typography sx={blurbSx} variant="body1">
             {HERO_WORDING.blurb}
