@@ -4,7 +4,7 @@ export const wrapperSx: SxProps = {
   alignItems: 'center',
   display: 'flex',
   flexDirection: {
-    xs: 'column-reverse',
+    xs: 'column',
     md: 'row',
   },
   gap: 6,
@@ -23,12 +23,14 @@ export const titleSx: SxProps = {
 
 export const contentSx: SxProps = {
   flexBasis: {
+    xs: 'auto',
     md: 400,
   },
 };
 
 export const imageSx: SxProps = {
   flexBasis: {
+    xs: 'auto',
     md: 600,
   },
 

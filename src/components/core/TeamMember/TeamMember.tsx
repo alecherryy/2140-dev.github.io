@@ -19,22 +19,8 @@ export const TeamMember = ({ image, name, role, twitter, github }: Props) => {
         <Box sx={svgSx}>
           <OutlineCircle />
         </Box>
-        <figure
-          style={{
-            borderRadius: 80,
-            overflow: 'hidden',
-            height: 80,
-            width: 80,
-            margin: 0,
-          }}
-        >
-          <img
-            width={80}
-            height={80}
-            style={{ objectFit: 'cover' }}
-            src={image}
-            alt={name}
-          />
+        <figure>
+          <img src={image} alt={name} />
         </figure>
       </Box>
       <Box>

@@ -6,10 +6,11 @@ import BoxIcon from '../../../images/box-icon.svg';
 import Artwork from '../../../images/about-artwork.svg';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { ABOUT_WORDING } from 'constants/wording';
+import { SECTION_WRAPPER_STYLES } from 'constants/styles';
 
 export const About = () => {
   return (
-    <Box py={15} id="about">
+    <Box sx={SECTION_WRAPPER_STYLES} id="about">
       <Container size="small">
         <Box sx={titleSx}>
           <SectionTitle

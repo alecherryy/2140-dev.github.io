@@ -1,11 +1,6 @@
 import { SxProps } from '@mui/material';
 import { colors } from '../../../theme/colors';
 
-export const wrapperSx: SxProps = {
-  background: colors.yellow[200],
-  py: 20,
-};
-
 export const innerSx: SxProps = {
   alignItems: 'center',
   display: 'flex',
@@ -40,6 +35,10 @@ export const imageWrapperSx: SxProps = {
 export const imageSx: SxProps = {
   position: {
     md: 'absolute',
+  },
+  mr: {
+    xs: -3,
+    md: undefined,
   },
   right: '25%',
   width: '150%',

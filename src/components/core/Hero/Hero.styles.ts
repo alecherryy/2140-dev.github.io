@@ -5,6 +5,10 @@ export const wrapperSx: SxProps = {
   height: {
     lg: '100vh',
   },
+  overflow: {
+    xs: 'hidden',
+    md: 'visible',
+  },
 };
 
 export const containerSx: SxProps = {

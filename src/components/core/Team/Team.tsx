@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
-import { titleSx, wrapperSx } from './Team.styles';
 import { Container } from '../../layouts/Container/Container';
 import { TeamMember } from '../TeamMember/TeamMember';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
@@ -8,9 +7,9 @@ import { TEAM_WORDING } from 'constants/wording';
 
 export const Team = () => {
   return (
-    <Box sx={wrapperSx} id="team">
+    <Box py={15} pb={30} id="team">
       <Container size="small">
-        <Box sx={titleSx}>
+        <Box sx={{ mb: 6, textAlign: 'center' }}>
           <SectionTitle
             eyebrow={TEAM_WORDING.eyebrow}
             title={TEAM_WORDING.title}
