@@ -1,6 +1,8 @@
 import { Box, SxProps, Typography } from '@mui/material';
 import { colors } from '../../../theme/colors';
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 type Props = {
   eyebrow: string;
@@ -18,7 +20,9 @@ export const SectionTitle = ({ eyebrow, title, sx }: Props) => {
       >
         {eyebrow}
       </Typography>
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant="h2">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{title}</ReactMarkdown>
+      </Typography>
     </Box>
   );
 };

@@ -25,7 +25,7 @@ export const HERO_WORDING = {
 
 export const ABOUT_WORDING = {
   eyebrow: '01 — About',
-  title: 'Empowerment Through Innovation',
+  title: `Supporting Bitcoin ~projects~ careers`,
   content: `Our mission is to empower Bitcoin Core developers through financial support, resources, and a
             collaborative community.`,
   subtitle: `We are dedicated to fostering the security, resilience, and progress of the Bitcoin network.`,
