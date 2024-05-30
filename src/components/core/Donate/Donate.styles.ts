@@ -11,56 +11,45 @@ export const innerSx: SxProps = {
   },
   gap: {
     xs: 4,
-    md: 0,
+    md: '8rem',
   },
 };
 
-export const contentSx: SxProps = {
+export const donateWrapperSx: SxProps = {
+  mx: 'auto',
+  maxWidth: 600,
+  textAlign: 'center',
+};
+
+export const rightSx: SxProps = {
   flexBasis: 450,
 };
 
 export const imageWrapperSx: SxProps = {
-  alignItems: 'center',
-  flexBasis: 'calc(100% - 450px - 4rem)',
-  display: 'flex',
-  justifyContent: {
-    xs: 'flex-end',
-    md: 'center',
-  },
+  flex: 1,
   height: '100%',
   minHeight: '100%',
   position: 'relative',
 };
 
 export const imageSx: SxProps = {
-  position: {
-    md: 'absolute',
-  },
-  mr: {
-    xs: -3,
-    md: undefined,
-  },
-  right: '25%',
-  width: '150%',
-  minWidth: {
-    xs: '150%',
-    md: 'auto',
-  },
+  // mr: {
+  //   xs: -3,
+  //   md: undefined,
+  // },
+  // right: '25%',
+  // width: '150%',
+  // minWidth: {
+  //   xs: '150%',
+  //   md: 'auto',
+  // },
 };
 
 export const buttonSx: SxProps = {
-  alignItems: 'center',
   background: colors.yellow[50],
   borderRadius: 100,
-  display: 'inline-flex',
-  gap: 4,
-  justifyContent: 'space-between',
   p: 3,
   paddingLeft: 5,
   mt: 3,
   mb: 10,
-  width: {
-    xs: '100%',
-    md: 'auto',
-  },
 };

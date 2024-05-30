@@ -3,71 +3,72 @@ import { Box, Typography } from '@mui/material';
 import {
   innerSx,
   imageSx,
-  buttonSx,
-  contentSx,
+  donateWrapperSx,
+  rightSx,
   imageWrapperSx,
 } from './Donate.styles';
 import { Container } from '../../layouts/Container/Container';
 import Artwork from '../../../images/donate-artwork.svg';
-import BoxIcon from '../../../images/box-icon.svg';
-import Server from '../../../images/server-icon.svg';
 import { Button } from '../Button/Button';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { colors } from '../../../theme/colors';
 import { DONATE_WORDING } from 'constants/wording';
 import { SECTION_WRAPPER_STYLES } from 'constants/styles';
+import { Eyebrow } from 'components/core/Eyebrow/Eyebrow';
+import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
 
 export const Donate = () => {
   return (
-    <Box
-      sx={{ ...SECTION_WRAPPER_STYLES, background: colors.yellow[200] }}
-      id="donate"
-    >
-      <Container size="medium">
-        <SectionTitle
-          eyebrow={DONATE_WORDING.eyebrow}
-          title={DONATE_WORDING.title}
-          sx={{
-            textAlign: 'center',
-            mb: 10,
-            '.MuiTypography-body1': {
-              color: colors.yellow[50],
-            },
-          }}
-        />
-        <Box sx={innerSx} id="donate">
-          <Box sx={imageWrapperSx}>
-            <Box sx={imageSx}>
-              <img src={Artwork} alt="Donate section graphic" />
-            </Box>
-          </Box>
-          <Box sx={contentSx}>
-            <img src={BoxIcon} height={64} alt="Icon of a computing cloud" />
+    <>
+      <Box sx={{ ...SECTION_WRAPPER_STYLES }} id="donate">
+        <Container size="medium">
+          <SectionTitle
+            eyebrow={DONATE_WORDING.eyebrow}
+            title={DONATE_WORDING.title}
+            sx={{
+              textAlign: 'center',
+              mb: 10,
+              '.MuiTypography-body1': {
+                color: colors.yellow[50],
+              },
+            }}
+          />
+          <Box sx={donateWrapperSx}>
+            <Eyebrow text={DONATE_WORDING.donate.eyebrow} color="yellow.200" />
             <Typography variant="h5">{DONATE_WORDING.donate.title}</Typography>
             <Typography variant="body1">
-              {DONATE_WORDING.donate.content}
+              <MarkdownRender>{DONATE_WORDING.donate.content}</MarkdownRender>
             </Typography>
-            <Box sx={buttonSx}>
-              <div>
-                <Typography variant="h6" mb="0.5rem">
-                  {DONATE_WORDING.donate.button.title}
-                </Typography>
-                <Typography variant="body2" mb={0}>
-                  {DONATE_WORDING.donate.button.text}
-                </Typography>
-              </div>
-              <div>
-                <Button>Donate</Button>
-              </div>
-            </Box>
-            <img src={Server} height={64} alt="Icon of a computing cloud" />
-            <Typography variant="h5">{DONATE_WORDING.contact.title}</Typography>
-            <Typography variant="body1" mb={0}>
-              {DONATE_WORDING.contact.content}
-            </Typography>
+
+            <Button variant="bigButton" sx={{ my: 8 }}>
+              Donate
+            </Button>
           </Box>
-        </Box>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+      <Box sx={{ ...SECTION_WRAPPER_STYLES, background: colors.yellow[200] }}>
+        <Container size="medium">
+          <Box sx={innerSx}>
+            <Box sx={imageWrapperSx}>
+              <Box sx={imageSx}>
+                <img src={Artwork} alt="Donate section graphic" />
+              </Box>
+            </Box>
+            <Box sx={rightSx}>
+              <Eyebrow
+                text={DONATE_WORDING.contact.eyebrow}
+                color="yellow.50"
+              />
+              <Typography variant="h5">
+                {DONATE_WORDING.contact.title}
+              </Typography>
+              <Typography variant="body1" mb={0}>
+                {DONATE_WORDING.contact.content}
+              </Typography>
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+    </>
   );
 };

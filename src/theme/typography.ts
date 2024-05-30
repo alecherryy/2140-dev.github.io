@@ -5,14 +5,14 @@ import { CSSProperties } from 'react';
 export const typeface = {
   // heading: 'Bricolage Grotesque, monospace',
   text: 'Poppins, monospace',
-}
+};
 
 const headings: CSSProperties = {
   color: colors.primary.main,
   lineHeight: 1.25,
   fontWeight: 600,
-  marginBottom: '1rem'
-}
+  marginBottom: '2rem',
+};
 
 export const typography: TypographyOptions = {
   htmlFontSize: 16,
@@ -47,10 +47,10 @@ export const typography: TypographyOptions = {
   },
   body1: {
     fontSize: '1rem',
-    marginBottom: '1rem'
+    marginBottom: '1rem',
   },
   body2: {
     fontSize: '0.9rem',
-    marginBottom: '1rem'
+    marginBottom: '1rem',
   },
-}
+};

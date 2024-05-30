@@ -1,18 +1,30 @@
 import React, { ReactNode } from 'react';
-import { ButtonProps, Button as MuiButton } from '@mui/material';
+import { Box, ButtonProps, Button as MuiButton } from '@mui/material';
 import { SystemStyleObject } from '@mui/system';
 import { colors } from '../../../theme/colors';
-import { buttonSx } from './Button.styles';
+import { commonButtonSx, buttonVariantSx } from './Button.styles';
 
-type Props = Omit<ButtonProps, 'sx'> & {
+type Props = Omit<ButtonProps, 'sx' | 'variant'> & {
   children?: ReactNode;
   sx?: SystemStyleObject;
+  variant?: 'default' | 'bigButton';
 };
 
-export const Button = ({ children, sx, ...rest }: Props) => {
+export const Button = ({
+  children,
+  sx,
+  variant = 'default',
+  ...rest
+}: Props) => {
   return (
-    <MuiButton sx={{ ...buttonSx, ...sx }} {...rest}>
-      {children} <OutlineCircle />
+    <MuiButton
+      sx={{ ...commonButtonSx, ...buttonVariantSx[variant], ...sx }}
+      {...rest}
+    >
+      {children}
+      <Box component="span">
+        <OutlineCircle />
+      </Box>
     </MuiButton>
   );
 };

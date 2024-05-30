@@ -25,7 +25,7 @@ export const HERO_WORDING = {
 
 export const ABOUT_WORDING = {
   eyebrow: '01 — About',
-  title: `Supporting Bitcoin ~projects~ careers`,
+  title: `Supporting Bitcoin <s>projects</s> careers`,
   content: `Our mission is to empower Bitcoin Core developers through financial support, resources, and a
             collaborative community.`,
   subtitle: `We are dedicated to fostering the security, resilience, and progress of the Bitcoin network.`,
@@ -59,10 +59,11 @@ export const TEAM_WORDING = {
 };
 
 export const DONATE_WORDING = {
-  eyebrow: '03 — Donate',
+  eyebrow: '3 — Donate',
   title: 'Get involved in our mission',
   donate: {
-    title: `Donate — Support the Future of Bitcoin`,
+    eyebrow: '3.1 — Donate',
+    title: `Support the Future of Bitcoin`,
     content: `Your donation fuels the innovative work of leading Bitcoin researchers and developers, ensuring the growth and security of the ecosystem. With your contribution, we can offer more resources, opportunities, and support to those shaping the future of Bitcoin.`,
     button: {
       title: 'Support our mission',
@@ -70,6 +71,7 @@ export const DONATE_WORDING = {
     },
   },
   contact: {
+    eyebrow: '3.2 — Contact',
     title: `Get in touch — At 2140, we're always eager to connect`,
     content: `Whether you're a developer with insights to share, a potential collaborator interested in our mission, or simply curious about our work, your thoughts are invaluable to us. Reach out today to discuss how we can work together to secure and innovate the Bitcoin ecosystem.`,
   },

@@ -24,7 +24,7 @@ export const titleSx: SxProps = {
 export const contentSx: SxProps = {
   flexBasis: {
     xs: 'auto',
-    md: 400,
+    md: 450,
   },
 };
 

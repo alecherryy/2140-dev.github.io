@@ -1,27 +1,25 @@
 import { Box, SxProps, Typography } from '@mui/material';
 import { colors } from '../../../theme/colors';
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
+import { Eyebrow } from 'components/core/Eyebrow/Eyebrow';
 
 type Props = {
   eyebrow: string;
   title: string;
+  eyebrowColor?: string;
   sx?: SxProps;
 };
-export const SectionTitle = ({ eyebrow, title, sx }: Props) => {
+export const SectionTitle = ({
+  eyebrow,
+  title,
+  eyebrowColor = 'yellow.200',
+  sx,
+}: Props) => {
   return (
     <Box sx={sx}>
-      <Typography
-        variant="body1"
-        component="span"
-        fontWeight={600}
-        color={colors.yellow[200]}
-      >
-        {eyebrow}
-      </Typography>
+      <Eyebrow text={eyebrow} color={eyebrowColor} />
       <Typography variant="h2">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{title}</ReactMarkdown>
+        <MarkdownRender>{title}</MarkdownRender>
       </Typography>
     </Box>
   );
