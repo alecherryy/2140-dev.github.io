@@ -81,15 +81,18 @@ export const buttonVariantSx: Record<
       },
     },
     '&:hover': {
-      backgroundColor: '#ececec',
+      backgroundColor: 'yellow.300',
+      color: 'yellow.50',
       svg: {
         transform: 'rotate(0deg)',
       },
-      '&::after': {
-        background: colors.yellow[400],
-        backgroundImage: `url(${Arrow})`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+      span: {
+        '&::after': {
+          background: 'yellow.50',
+          // backgroundImage: `url(${Arrow})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        },
       },
     },
   },

@@ -13,6 +13,7 @@ import Background from '../../../images/background.svg';
 import { Button } from '../Button/Button';
 import { Container } from 'components/layouts/Container/Container';
 import { HERO_WORDING } from 'constants/wording';
+import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
 
 export const Hero = () => {
   const handleClick = () => {
@@ -26,11 +27,7 @@ export const Hero = () => {
       <Container size="large" sx={containerSx}>
         <Box sx={leftSx}>
           <Typography variant="h1">
-            {HERO_WORDING.title_lhs}{' '}
-            <Typography variant="h1" component="span" fontWeight={300}>
-              {HERO_WORDING.year}{' '}
-            </Typography>
-            {HERO_WORDING.title_rhs}
+            <MarkdownRender>{HERO_WORDING.title}</MarkdownRender>
           </Typography>
           <Typography sx={blurbSx} variant="body1">
             {HERO_WORDING.blurb}

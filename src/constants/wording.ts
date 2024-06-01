@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import Josibake from '../images/josibake.jpg';
 import Ruben from '../images/ruben.jpg';
 
@@ -17,10 +18,8 @@ export const MENU_ITEMS = [
 ];
 
 export const HERO_WORDING = {
-  title_lhs: `Supporting Bitcoin to`,
-  title_rhs: `and beyond`,
-  year: `2140`,
-  blurb: `2140 exists to support Bitcoin research and development by supporting the individual contributors who make all of this possible.`,
+  title: `Supporting Bitcoin<br /> to 2140 and beyond`,
+  blurb: `2140 is a Europe-based non-profit organization (NGO) dedicated to supporting Bitcoin research and development. Our mission is to provide protocol veterans with long-term stability through employment in our Amsterdam office and to onboard aspiring contributors.`,
   button: `Read more`,
 };
 
@@ -30,8 +29,8 @@ export const ABOUT_WORDING = {
   content: ``,
   subtitle: `Working on Bitcoin is hard enough, making it your full-time job shouldn't be.`,
   paragraphs: [
-	  `2140 is a non-profit organization dedicated to supporting FOSS contributors by providing stable, full-time employment. Our Amsterdam-based office serves as a hub for collaboration and innovation where open source contributors can continue their work with the security of traditional employment.`,
-`Our focus is on security, resilience, and long-term maintainability. While short term projects are important, we aim to give contributors stability and runway to focus on bigger, multi-year problems. Its also why we focus on mentorship and career growth: we want to ensure that the community of people who understand the Bitcoin protocol on a deep technical level is growing year over year, not shrinking.`,
+    `2140 is a non-profit organization dedicated to supporting FOSS contributors by providing stable, full-time employment. Our Amsterdam-based office serves as a hub for collaboration and innovation where open source contributors can continue their work with the security of traditional employment.`,
+    `Our focus is on security, resilience, and long-term maintainability. While short term projects are important, we aim to give contributors stability and runway to focus on bigger, multi-year problems. Its also why we focus on mentorship and career growth: we want to ensure that the community of people who understand the Bitcoin protocol on a deep technical level is growing year over year, not shrinking.`,
   ],
 };
 

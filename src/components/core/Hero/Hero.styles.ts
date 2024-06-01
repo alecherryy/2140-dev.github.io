@@ -35,7 +35,7 @@ export const leftSx: SxProps = {
 
 export const backgroundSx: SxProps = {
   position: 'absolute',
-  right: '-5%',
+  right: '-10%',
   top: 0,
   zIndex: -1,
   '::after': {
@@ -60,7 +60,6 @@ export const imageSx: SxProps = {
 };
 
 export const blurbSx: SxProps = {
-  fontSize: '1.25rem',
   mt: 1,
-  maxWidth: 480,
+  maxWidth: 600,
 };

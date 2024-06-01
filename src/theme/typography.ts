@@ -20,11 +20,11 @@ export const typography: TypographyOptions = {
   fontSize: 16,
   h1: {
     ...headings,
-    fontSize: '5rem',
+    fontSize: '4rem',
   },
   h2: {
     ...headings,
-    fontSize: '4rem',
+    fontSize: '3.5rem',
   },
   h3: {
     ...headings,
