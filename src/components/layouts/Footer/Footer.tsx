@@ -1,14 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { debounce } from 'lodash';
 import { Logo } from '../../core/Logo/Logo';
-import { Box } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Container } from '../Container/Container';
 import { colors } from '../../../theme/colors';
 import { Menu } from 'components/core/Menu/Menu';
+import { Button } from 'components/core/Button/Button';
+import { FOOTER_WORDING } from 'constants/wording';
+import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
 
-export const Header = () => {
+export const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isSticky, setIsSticky] = useState(false);
@@ -35,36 +38,21 @@ export const Header = () => {
   }, [handleScroll]);
 
   return (
-    <Box
-      ref={ref}
+    <Container
+      size="large"
       sx={{
-        color: 'primary.main',
-        position: 'absolute',
-        overflow: 'hidden',
-        width: '100%',
-        zIndex: 999,
-        transition: 'all 0.2s ease-in',
-        ...((isSticky || isMobile) && { position: 'fixed' }),
-        ...(!isMobile &&
-          isSticky && {
-            background: colors.yellow[50],
-            color: colors.primary.main,
-            boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
-          }),
+        alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'space-between',
+        py: 2,
       }}
     >
-      <Container
-        size="large"
-        sx={{
-          alignItems: 'center',
-          height: 80,
-          display: 'flex',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Logo />
-        <Menu isMobile={isMobile} />
-      </Container>
-    </Box>
+      <Typography variant="caption" component="div" fontWeight={600}>
+        <Link href="mailto:test@email.com">test@email.com</Link>
+      </Typography>
+      <Typography variant="caption" component="div">
+        <MarkdownRender>{FOOTER_WORDING.attribution}</MarkdownRender>
+      </Typography>
+    </Container>
   );
 };

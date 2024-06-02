@@ -53,4 +53,8 @@ export const typography: TypographyOptions = {
     fontSize: '0.9rem',
     marginBottom: '0.5rem',
   },
+  caption: {
+    fontSize: '0.75rem',
+    color: colors.gray[100],
+  },
 };

@@ -1,4 +1,3 @@
-import dayjs from 'dayjs';
 import Josibake from '../images/josibake.jpg';
 import Ruben from '../images/ruben.jpg';
 
@@ -16,6 +15,10 @@ export const MENU_ITEMS = [
     anchor: 'getInvolved',
   },
 ];
+
+export const FOOTER_WORDING = {
+  attribution: `All artwork featured on this website was sourced and derived from <a href="http://www.freepik.com/" target="_blank">Freepik</a>; you can see more of the artist's work <a href="https://www.freepik.com/author/fullvector" target="_blank">here</a>.`,
+};
 
 export const HERO_WORDING = {
   title: `Supporting Bitcoin<br /> to 2140 and beyond`,
