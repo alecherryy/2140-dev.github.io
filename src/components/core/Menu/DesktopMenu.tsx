@@ -16,6 +16,7 @@ export const DesktopMenu = ({ items }: MenuProps) => {
               smooth={true}
               duration={500}
               spy={true}
+              offset={-80}
               activeStyle={{ fontWeight: 600 }}
             >
               {item.text}

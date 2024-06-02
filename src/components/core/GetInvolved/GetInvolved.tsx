@@ -14,6 +14,7 @@ export const Donate = () => {
       id="getInvolved"
       sx={{
         ...SECTION_WRAPPER_STYLES,
+        py: 20,
         background: colors.yellow[200],
       }}
     >
