@@ -21,30 +21,6 @@ export const donateWrapperSx: SxProps = {
   textAlign: 'center',
 };
 
-export const rightSx: SxProps = {
-  flexBasis: 450,
-};
-
-export const imageWrapperSx: SxProps = {
-  flex: 1,
-  height: '100%',
-  minHeight: '100%',
-  position: 'relative',
-};
-
-export const imageSx: SxProps = {
-  // mr: {
-  //   xs: -3,
-  //   md: undefined,
-  // },
-  // right: '25%',
-  // width: '150%',
-  // minWidth: {
-  //   xs: '150%',
-  //   md: 'auto',
-  // },
-};
-
 export const buttonSx: SxProps = {
   background: colors.yellow[50],
   borderRadius: 100,

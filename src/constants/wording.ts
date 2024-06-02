@@ -12,7 +12,7 @@ export const MENU_ITEMS = [
     anchor: 'team',
   },
   {
-    text: 'Get involved',
+    text: 'Get Involved',
     anchor: 'getInvolved',
   },
 ];
@@ -64,21 +64,12 @@ export const TEAM_WORDING = {
   ],
 };
 
-export const DONATE_WORDING = {
-  eyebrow: '3 — Donate',
+export const GET_INVOLVED_WORDING = {
+  eyebrow: '3 — Get Involved',
   title: 'Get involved in our mission',
-  donate: {
-    eyebrow: '3.1 — Donate',
-    title: `Support the Future of Bitcoin`,
-    content: `2140 is not a business: we are a non-profit with 100% of donations being used to provide long-term support to open source contributors. Our aim is to do this sustainably, which is only possible with community support.`,
-    button: {
-      title: 'Support our mission',
-      text: 'Join us in empowering this vital work',
-    },
-  },
-  contact: {
-    eyebrow: '3.2 — Contact',
-    title: `Get in touch — At 2140, we're always eager to connect`,
-    content: `Whether you're a developer with insights to share, a potential collaborator, or simply curious about our work, we'd love to hear from you!`,
+  content: `2140 is not a business: we are a non-profit with 100% of donations being used to provide long-term support to open source contributors. Our aim is to do this sustainably, which is only possible with community support.`,
+  button: {
+    title: 'Support our mission',
+    text: 'Join us in empowering this vital work',
   },
 };

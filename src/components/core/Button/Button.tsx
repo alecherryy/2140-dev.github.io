@@ -7,7 +7,7 @@ import { commonButtonSx, buttonVariantSx } from './Button.styles';
 type Props = Omit<ButtonProps, 'sx' | 'variant'> & {
   children?: ReactNode;
   sx?: SystemStyleObject;
-  variant?: 'primary' | 'secondary' | 'large';
+  variant?: 'primary' | 'secondary' | 'large' | 'donate';
 };
 
 export const Button = ({
@@ -22,12 +22,20 @@ export const Button = ({
       {...rest}
     >
       {children}
-      <Box component="span">{variant !== 'secondary' && <OutlineCircle />}</Box>
+      <Box component="span">
+        {variant !== 'secondary' && <OutlineCircle variant={variant} />}
+      </Box>
     </MuiButton>
   );
 };
 
-const OutlineCircle = () => {
+const strokeColor: Record<string, string> = {
+  primary: colors.primary.main,
+  secondary: 'transparent',
+  large: colors.yellow[50],
+  donate: colors.primary.main,
+};
+const OutlineCircle = ({ variant = 'primary' }: Pick<Props, 'variant'>) => {
   return (
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
       <circle
@@ -35,7 +43,7 @@ const OutlineCircle = () => {
         cy="32"
         r="31.5"
         style={{
-          stroke: colors.primary.main,
+          stroke: strokeColor[variant],
           strokeWidth: 1,
           strokeDasharray: 170,
         }}

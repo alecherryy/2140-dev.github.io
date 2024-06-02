@@ -17,7 +17,7 @@ export const buttonSx: SxProps = {
 export const menuSx: SxProps = {
   alignItems: 'center',
   background: colors.yellow[200],
-  display: 'none',
+  display: 'flex',
   flexDirection: 'column',
   height: '100vh',
   justifyContent: 'center',
@@ -35,13 +35,5 @@ export const itemSx: SxProps = {
   textAlign: 'center',
   width: 'auto',
   p: 0,
-  mb: 0,
-};
-
-export const linkSx: SxProps = {
-  fontSize: typography.h4,
-  color: colors.yellow[50],
-  p: 0,
-  textDecoration: 'none',
-  position: 'relative',
+  mb: 3,
 };

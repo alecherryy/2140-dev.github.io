@@ -2,7 +2,7 @@ import { SystemStyleObject, SxProps } from '@mui/system';
 import { colors } from 'theme/colors';
 import Arrow from '../../../images/icon-arrow-right.svg';
 
-const pseusdoSxProps: SxProps = {
+const pseusdoSx: SxProps = {
   content: '""',
   background: colors.yellow[200],
   backgroundImage: `url(${Arrow})`,
@@ -16,6 +16,16 @@ const pseusdoSxProps: SxProps = {
   width: 40,
 };
 
+const spanSx: SxProps = {
+  alignItems: 'center',
+  display: 'flex',
+  position: 'relative',
+  justifyContent: 'center',
+  height: 64,
+  minWidth: 64,
+  width: 64,
+};
+
 export const commonButtonSx: SystemStyleObject = {
   alignItems: 'center',
   display: 'inline-flex',
@@ -23,15 +33,9 @@ export const commonButtonSx: SystemStyleObject = {
   textTransform: 'none',
   minWidth: 'auto',
   span: {
-    alignItems: 'center',
-    display: 'flex',
-    position: 'relative',
-    justifyContent: 'center',
-    height: 64,
-    minWidth: 64,
-    width: 64,
+    ...spanSx,
     '&::after': {
-      ...pseusdoSxProps,
+      ...pseusdoSx,
     },
   },
   svg: {
@@ -41,7 +45,7 @@ export const commonButtonSx: SystemStyleObject = {
 };
 
 export const buttonVariantSx: Record<
-  'primary' | 'secondary' | 'large',
+  'primary' | 'secondary' | 'large' | 'donate',
   SystemStyleObject
 > = {
   primary: {
@@ -65,7 +69,7 @@ export const buttonVariantSx: Record<
   },
   secondary: {
     backgroundColor: 'primary.main',
-    color: colors.yellow[50],
+    color: 'yellow.50',
     fontWeight: 600,
     borderRadius: 40,
     pl: 4,
@@ -75,19 +79,14 @@ export const buttonVariantSx: Record<
       height: 40,
       minWidth: 40,
       width: 40,
-      '&::after': { ...pseusdoSxProps, backgroundColor: 'transparent' },
+      '&::after': { ...pseusdoSx, backgroundColor: 'transparent' },
     },
     '&:hover': {
       backgroundColor: 'yellow.200',
-      // span: {
-      //   '&::after': {
-      //     backgroundImage: `url(${Arrow})`,
-      //   },
-      // },
     },
   },
   large: {
-    backgroundColor: colors.yellow[200],
+    backgroundColor: 'yellow.200',
     fontWeight: 600,
     borderRadius: 100,
     fontSize: '2rem',
@@ -95,36 +94,55 @@ export const buttonVariantSx: Record<
     height: 100,
     px: 10,
     span: {
-      alignItems: 'center',
-      display: 'flex',
-      position: 'relative',
-      justifyContent: 'center',
+      ...spanSx,
       '&::after': {
-        content: '""',
-        background: colors.yellow[400],
-        backgroundImage: `url(${Arrow})`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        borderRadius: 40,
-        height: 40,
-        position: 'absolute',
-        transition: 'all 0.2s cubic-bezier(0.83, 0, 0.17, 1)',
-        width: 40,
+        ...pseusdoSx,
+        backgroundColor: colors.primary.main,
       },
     },
     '&:hover': {
       backgroundColor: 'yellow.300',
       color: 'yellow.50',
-      svg: {
-        transform: 'rotate(0deg)',
-      },
       span: {
         '&::after': {
-          background: 'yellow.50',
-          // backgroundImage: `url(${Arrow})`,
+          background: colors.primary.main,
+          backgroundImage: `url(${Arrow})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         },
+      },
+      svg: {
+        transform: 'rotate(0deg)',
+      },
+    },
+  },
+  donate: {
+    backgroundColor: 'yellow.50',
+    fontWeight: 600,
+    borderRadius: 100,
+    fontSize: '2rem',
+    letterSpacing: 5,
+    height: 100,
+    px: 10,
+    span: {
+      ...spanSx,
+      '&::after': {
+        ...pseusdoSx,
+        backgroundColor: colors.yellow[200],
+      },
+    },
+    '&:hover': {
+      backgroundColor: 'yellow.50',
+      span: {
+        '&::after': {
+          background: colors.yellow[400],
+          backgroundImage: `url(${Arrow})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        },
+      },
+      svg: {
+        transform: 'rotate(0deg)',
       },
     },
   },

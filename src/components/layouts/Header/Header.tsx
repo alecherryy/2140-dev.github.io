@@ -64,10 +64,7 @@ export const Header = () => {
         size="large"
       >
         <Logo />
-        <Box sx={{ display: 'flex', gap: 5, justifyContent: 'flex-end' }}>
-          <Menu isMobile={isMobile} />
-          <Button variant="secondary">Donate</Button>
-        </Box>
+        <Menu isMobile={isMobile} />
       </Container>
     </Box>
   );

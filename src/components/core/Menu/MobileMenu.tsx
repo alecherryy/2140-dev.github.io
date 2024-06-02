@@ -1,10 +1,13 @@
 import React from 'react';
-import { List, ListItem, Link, Box, ButtonBase } from '@mui/material';
+import { List, ListItem, Box, ButtonBase, Typography } from '@mui/material';
 import MenuOpen from '../../../images/menu-open.svg';
 import MenuClose from '../../../images/menu-close.svg';
-import { buttonSx, iconSx, itemSx, linkSx, menuSx } from './MobileMenu.styles';
+import { buttonSx, iconSx, itemSx, menuSx } from './MobileMenu.styles';
 import { MenuProps } from 'components/core/Menu/Menu';
 import { useMenuContext } from 'providers/MenuProvider/hooks/useMenuContext';
+import { Button } from 'components/core/Button/Button';
+import { colors } from 'theme/colors';
+import { Link } from 'react-scroll';
 
 export const MobileMenu = ({ items, handleClick }: MenuProps) => {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useMenuContext();
@@ -21,29 +24,42 @@ export const MobileMenu = ({ items, handleClick }: MenuProps) => {
   return (
     <Box>
       <MenuIcon isOpen={isMobileMenuOpen} handleClick={handleMenuItemClick} />
-      <List
-        sx={{
-          ...menuSx,
-          ...(isMobileMenuOpen && {
-            display: 'flex',
-          }),
-        }}
-      >
-        {items.map((item) => (
-          <ListItem key={item.text} sx={itemSx}>
-            <Link
-              sx={linkSx}
-              onClick={(e) => {
-                handleClick(e, item.anchor);
-                handleMenuItemClick();
-              }}
-              href={item.anchor}
-            >
-              {item.text}
-            </Link>
+      <Box sx={{ display: isMobileMenuOpen ? 'block' : 'none' }}>
+        <List sx={menuSx}>
+          {items.map((item) => (
+            <ListItem key={item.text} sx={itemSx}>
+              <Link onClick={handleMenuItemClick} spy={true} to={item.anchor}>
+                <Typography
+                  variant="h3"
+                  component="span"
+                  sx={{ cursor: 'pointer' }}
+                >
+                  {item.text}
+                </Typography>
+              </Link>
+            </ListItem>
+          ))}
+          <ListItem
+            sx={{
+              ...itemSx,
+              position: 'static',
+              mt: 20,
+              '&::before': {
+                content: '""',
+                background: colors.yellow[50],
+                position: 'absolute',
+                height: '100vh',
+                borderRadius: '100%',
+                top: '45vh',
+                left: '-22vh',
+                width: '100vh',
+              },
+            }}
+          >
+            <Button variant="large">Donate</Button>
           </ListItem>
-        ))}
-      </List>
+        </List>
+      </Box>
     </Box>
   );
 };
