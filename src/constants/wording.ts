@@ -5,32 +5,40 @@ import Ruben from '../images/ruben.jpg';
 export const MENU_ITEMS = [
   {
     text: 'About',
-    anchor: '#about',
+    anchor: 'about',
   },
   {
     text: 'Team',
-    anchor: '#team',
+    anchor: 'team',
   },
   {
-    text: 'Donate',
-    anchor: '#donate',
+    text: 'Get involved',
+    anchor: 'getInvolved',
   },
 ];
 
 export const HERO_WORDING = {
   title: `Supporting Bitcoin<br /> to 2140 and beyond`,
-  blurb: `2140 is a Europe-based non-profit organization (NGO) dedicated to supporting Bitcoin research and development. Our mission is to provide protocol veterans with long-term stability through employment in our Amsterdam office and to onboard aspiring contributors.`,
+  blurb: `2140 is a European non-profit organization (NGO) dedicated to supporting Bitcoin research and development. Our mission is to provide protocol veterans with long-term stability through employment in our Amsterdam office and to onboard aspiring contributors.`,
   button: `Read more`,
 };
 
 export const ABOUT_WORDING = {
   eyebrow: '01 — About',
   title: `Building <s>projects</s> careers`,
-  content: ``,
-  subtitle: `Working on Bitcoin is hard enough, making it your full-time job shouldn't be.`,
-  paragraphs: [
-    `2140 is a non-profit organization dedicated to supporting FOSS contributors by providing stable, full-time employment. Our Amsterdam-based office serves as a hub for collaboration and innovation where open source contributors can continue their work with the security of traditional employment.`,
-    `Our focus is on security, resilience, and long-term maintainability. While short term projects are important, we aim to give contributors stability and runway to focus on bigger, multi-year problems. Its also why we focus on mentorship and career growth: we want to ensure that the community of people who understand the Bitcoin protocol on a deep technical level is growing year over year, not shrinking.`,
+  blurb: `At 2140, our focus is the long-term security, resilience and stability of the Bitcoin network; our employment opportunities and fellowship programs are not just about funding developers. We want contributors to build a career within the space and focus on large-scale, multi-year initiatives.`,
+  sections: [
+    {
+      eyebrow: 'What we offer',
+      subtitle: `Working on Bitcoin is hard enough, making it your full-time job shouldn't be`,
+      content: `<i>Full-time employment.</i> Long-time contributors are the back bone of the Bitcoing network; being in the space for years, they acquired the technical knowledge and expertise crucial to the success of the ecosystem. 2140 provides them the security, tools and resources they need to focus on long-term projects and the betterment of the Bitcoin network.
+      <br /><br /><i>One-year fellowship.</i> Becoming an open-source contributor can be an intimidating and challenging task. Our 1-year fellowship program is dedicated to newcomers aspiring to become full-time contributors and helps them through this transition by offering mentorship, guidance and first-hand experience within the Bitcoin ecostystem.`,
+    },
+    {
+      eyebrow: 'Why we care',
+      subtitle: `Ipsum dolorum definitionem mel ea`,
+      content: `Ipsum dolorum definitionem mel ea, eros blandit honestatis sea at. Mel te solet civibus, ne putent aliquid recusabo sed. Sint constituam qui et, est an magna invidunt. Labore suscipiantur pro in, id vide summo errem nam. Ipsum dolorum definitionem mel ea, eros blandit honestatis sea at. Mel te solet civibus, ne putent aliquid recusabo sed. Sint constituam qui et, est an magna invidunt. Labore suscipiantur pro in, id vide summo errem nam.`,
+    },
   ],
 };
 

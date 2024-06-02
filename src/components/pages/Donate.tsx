@@ -12,12 +12,10 @@ export const Homepage = () => {
       <MenuProvider>
         <Header />
       </MenuProvider>
-      <div id="main">
-        <Hero />
-        <About />
-        <Team />
-        <Donate />
-      </div>
+      <Hero />
+      <About />
+      <Team />
+      <Donate />
     </>
   );
 };

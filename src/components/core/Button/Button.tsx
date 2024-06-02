@@ -7,13 +7,13 @@ import { commonButtonSx, buttonVariantSx } from './Button.styles';
 type Props = Omit<ButtonProps, 'sx' | 'variant'> & {
   children?: ReactNode;
   sx?: SystemStyleObject;
-  variant?: 'default' | 'bigButton';
+  variant?: 'primary' | 'secondary' | 'large';
 };
 
 export const Button = ({
   children,
   sx,
-  variant = 'default',
+  variant = 'primary',
   ...rest
 }: Props) => {
   return (
@@ -22,9 +22,7 @@ export const Button = ({
       {...rest}
     >
       {children}
-      <Box component="span">
-        <OutlineCircle />
-      </Box>
+      <Box component="span">{variant !== 'secondary' && <OutlineCircle />}</Box>
     </MuiButton>
   );
 };

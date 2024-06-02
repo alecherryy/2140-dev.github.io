@@ -1,28 +1,37 @@
-import { SystemStyleObject } from '@mui/system';
+import { SystemStyleObject, SxProps } from '@mui/system';
 import { colors } from 'theme/colors';
 import Arrow from '../../../images/icon-arrow-right.svg';
+
+const pseusdoSxProps: SxProps = {
+  content: '""',
+  background: colors.yellow[200],
+  backgroundImage: `url(${Arrow})`,
+  backgroundPosition: 'center',
+  display: 'block',
+  backgroundRepeat: 'no-repeat',
+  borderRadius: 40,
+  height: 40,
+  position: 'absolute',
+  transition: 'all 0.2s cubic-bezier(0.83, 0, 0.17, 1)',
+  width: 40,
+};
 
 export const commonButtonSx: SystemStyleObject = {
   alignItems: 'center',
   display: 'inline-flex',
   gap: 1,
   textTransform: 'none',
+  minWidth: 'auto',
   span: {
     alignItems: 'center',
     display: 'flex',
     position: 'relative',
     justifyContent: 'center',
+    height: 64,
+    minWidth: 64,
+    width: 64,
     '&::after': {
-      content: '""',
-      background: colors.yellow[200],
-      backgroundImage: `url(${Arrow})`,
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      borderRadius: 40,
-      height: 40,
-      position: 'absolute',
-      transition: 'all 0.2s cubic-bezier(0.83, 0, 0.17, 1)',
-      width: 40,
+      ...pseusdoSxProps,
     },
   },
   svg: {
@@ -32,10 +41,10 @@ export const commonButtonSx: SystemStyleObject = {
 };
 
 export const buttonVariantSx: Record<
-  'default' | 'bigButton',
+  'primary' | 'secondary' | 'large',
   SystemStyleObject
 > = {
-  default: {
+  primary: {
     fontWeight: 400,
     height: 64,
     p: 0,
@@ -54,7 +63,30 @@ export const buttonVariantSx: Record<
       },
     },
   },
-  bigButton: {
+  secondary: {
+    backgroundColor: 'primary.main',
+    color: colors.yellow[50],
+    fontWeight: 600,
+    borderRadius: 40,
+    pl: 4,
+    pr: 2,
+    py: 0.5,
+    span: {
+      height: 40,
+      minWidth: 40,
+      width: 40,
+      '&::after': { ...pseusdoSxProps, backgroundColor: 'transparent' },
+    },
+    '&:hover': {
+      backgroundColor: 'yellow.200',
+      // span: {
+      //   '&::after': {
+      //     backgroundImage: `url(${Arrow})`,
+      //   },
+      // },
+    },
+  },
+  large: {
     backgroundColor: colors.yellow[200],
     fontWeight: 600,
     borderRadius: 100,

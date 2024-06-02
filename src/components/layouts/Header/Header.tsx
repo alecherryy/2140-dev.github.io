@@ -7,6 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Container } from '../Container/Container';
 import { colors } from '../../../theme/colors';
 import { Menu } from 'components/core/Menu/Menu';
+import { Button } from 'components/core/Button/Button';
 
 export const Header = () => {
   const theme = useTheme();
@@ -38,7 +39,7 @@ export const Header = () => {
     <Box
       ref={ref}
       sx={{
-        color: colors.yellow[50],
+        color: 'primary.main',
         position: 'absolute',
         overflow: 'hidden',
         width: '100%',
@@ -63,7 +64,10 @@ export const Header = () => {
         size="large"
       >
         <Logo />
-        <Menu isMobile={isMobile} />
+        <Box sx={{ display: 'flex', gap: 5, justifyContent: 'flex-end' }}>
+          <Menu isMobile={isMobile} />
+          <Button variant="secondary">Donate</Button>
+        </Box>
       </Container>
     </Box>
   );

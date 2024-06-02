@@ -20,7 +20,7 @@ import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRendere
 export const Donate = () => {
   return (
     <>
-      <Box sx={{ ...SECTION_WRAPPER_STYLES }} id="donate">
+      <Box sx={{ ...SECTION_WRAPPER_STYLES }} id="getInvolved">
         <Container size="medium">
           <SectionTitle
             eyebrow={DONATE_WORDING.eyebrow}
@@ -40,7 +40,7 @@ export const Donate = () => {
               <MarkdownRender>{DONATE_WORDING.donate.content}</MarkdownRender>
             </Typography>
 
-            <Button variant="bigButton" sx={{ my: 8 }}>
+            <Button variant="large" sx={{ my: 8 }}>
               Donate
             </Button>
           </Box>

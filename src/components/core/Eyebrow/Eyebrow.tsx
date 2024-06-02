@@ -8,7 +8,7 @@ interface Props {
 export const Eyebrow = ({ color, text }: Props) => {
   return (
     <Typography
-      variant="body1"
+      variant="body2"
       component="span"
       fontWeight={600}
       color={color}

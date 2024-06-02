@@ -35,7 +35,7 @@ export const leftSx: SxProps = {
 
 export const backgroundSx: SxProps = {
   position: 'absolute',
-  right: '-10%',
+  right: '-8%',
   top: 0,
   zIndex: -1,
   '::after': {
