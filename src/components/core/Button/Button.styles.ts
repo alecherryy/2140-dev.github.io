@@ -1,6 +1,6 @@
 import { SystemStyleObject, SxProps } from '@mui/system';
 import { colors } from 'theme/colors';
-import Arrow from '../../../images/icon-arrow-right.svg';
+import Arrow from '../../../images/icons/arrow-right.svg';
 
 const pseusdoSx: SxProps = {
   content: '""',

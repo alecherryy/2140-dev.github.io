@@ -1,14 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { debounce } from 'lodash';
-import { Logo } from '../../core/Logo/Logo';
 import { Box, Link, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Container } from '../Container/Container';
-import { colors } from '../../../theme/colors';
-import { Menu } from 'components/core/Menu/Menu';
-import { Button } from 'components/core/Button/Button';
 import { FOOTER_WORDING } from 'constants/wording';
+import Email from '../../../images/icons/email.svg';
 import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
 
 export const Footer = () => {
@@ -47,17 +44,27 @@ export const Footer = () => {
         py: 2,
       }}
     >
-      <Typography variant="caption" component="div" fontWeight={600}>
-        <Link href="mailto:hello@2140.dev">hello@2140.dev</Link>
-      </Typography>
+      <Box sx={{ display: 'flex', gap: 3 }}>
+        <Link
+          href={`mailto:${FOOTER_WORDING.email}`}
+          sx={{ display: 'inline-flex', gap: 1, alignItems: 'center' }}
+        >
+          <img src={Email} alt="Email icon" width={20} />
+          <Typography
+            variant="caption"
+            component="span"
+            fontWeight={600}
+            color="primary.dark"
+          >
+            {FOOTER_WORDING.email}
+          </Typography>
+        </Link>
+        <Typography variant="caption" component="div" color="primary.dark">
+          <MarkdownRender>{FOOTER_WORDING.gpg}</MarkdownRender>
+        </Typography>
+      </Box>
       <Typography variant="caption" component="div">
-        <MarkdownRender>{FOOTER_WORDING.gpg}</MarkdownRender>
-      </Typography>
-      <Typography variant="caption" component="div">
-        <MarkdownRender>{FOOTER_WORDING.foundation}</MarkdownRender>
-      </Typography>
-      <Typography variant="caption" component="div">
-        <MarkdownRender>{FOOTER_WORDING.attribution}</MarkdownRender>
+        <MarkdownRender>{FOOTER_WORDING.text}</MarkdownRender>
       </Typography>
     </Container>
   );

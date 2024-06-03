@@ -17,13 +17,13 @@ export const MENU_ITEMS = [
 ];
 
 export const FOOTER_WORDING = {
-  attribution: `All artwork featured on this website was sourced and derived from <a href="http://www.freepik.com/" target="_blank">Freepik</a>; you can see more of the artist's work <a href="https://www.freepik.com/author/fullvector" target="_blank">here</a>.`,
+  email: 'hello@2140.dev',
+  text: `Stichting 2140, Registered at the Chamber of Commerce in Amsterdam under 93717113. <br />All artwork featured on this website was sourced and derived from <a href="http://www.freepik.com/" target="_blank">Freepik</a>; you can see more of the artist's work <a href="https://www.freepik.com/author/fullvector" target="_blank">here</a>.`,
   gpg: `GPG: XXXX YYYY ZZZZ AAAA BBBB CCCC DDDD EEEE FFFF GGGG`,
-  foundation: `Stichting 2140, Registered at the Chamber of Commerce in Amsterdam under 93717113`,
 };
 
 export const HERO_WORDING = {
-  title: `Supporting Bitcoin<br /> to 2140 and beyond`,
+  title: `Supporting<br />Bitcoin to 2140<br />and beyond`,
   blurb: `2140 is a European non-profit organization (NGO) dedicated to supporting Bitcoin research and development. Our mission is to provide protocol veterans with long-term stability through employment in our Amsterdam office and to onboard aspiring contributors.`,
   button: `Read more`,
 };
@@ -38,14 +38,14 @@ export const ABOUT_WORDING = {
       subtitle: `Working on Bitcoin is hard enough, making it your full-time job shouldn't be`,
       content: `<i>Full-time Employment:</i> Long-term contributors are the backbone of any open-source project. With years of experience, they possess the technical knowledge and expertise crucial to the ecosystem's success. At 2140, we handle administrative tasks and provide the stability and resources typical of traditional employment. Our support allows contributors to focus on what truly matters: building a repository of technical knowledge and driving multi-year initiatives. Our Amsterdam office helps by offering a space for in-person collaboration, fostering a strong sense of community and collaboration.
 
-<br /><br /><i>One-year Fellowship:</i> Becoming an open-source contributor can be intimidating and challenging. Our fellowship program helps newcomers aspiring to become full-time contributors by offering mentorship and hands-on experience in open-source development. This program ensures a steady influx of new talent, contributing to the sustainability and growth of Bitcoin. We want to ensure the community of people who understand Bitcoin on a deep, technical level is growing year over year, not shrinking.`
+<br /><br /><i>One-year Fellowship:</i> Becoming an open-source contributor can be intimidating and challenging. Our fellowship program helps newcomers aspiring to become full-time contributors by offering mentorship and hands-on experience in open-source development. This program ensures a steady influx of new talent, contributing to the sustainability and growth of Bitcoin. We want to ensure the community of people who understand Bitcoin on a deep, technical level is growing year over year, not shrinking.`,
     },
-     {
-       eyebrow: 'How to get involved',
-       subtitle: `Already working as an open-source contributor? We'd love to chat!`,
-       content: `If you are currently contributing to Bitcoin in an open source capacity and interested in working with us in Amsterdam, we would love to hear from you! Give us a shout at <a href="mailto:hello@2140.dev">hello@2140.dev</a>
+    {
+      eyebrow: 'How to get involved',
+      subtitle: `Already working as an open-source contributor? We'd love to chat!`,
+      content: `If you are currently contributing to Bitcoin in an open source capacity and interested in working with us in Amsterdam, we would love to hear from you! Give us a shout at <a href="mailto:hello@2140.dev">hello@2140.dev</a>
 . If you're interested in our fellowship program, check back for more information as we build the program out.`,
-     },
+    },
   ],
 };
 

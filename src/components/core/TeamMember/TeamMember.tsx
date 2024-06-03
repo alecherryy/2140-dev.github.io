@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, Link, List, ListItem, Typography } from '@mui/material';
 import { cardSx, imageSx, linkSx, svgSx } from './TeamMember.styles';
 import { colors } from '../../../theme/colors';
-import Github from '../../../images/icon-github.svg';
-import X from '../../../images/icon-x.svg';
+import Github from '../../../images/icons/github.svg';
+import X from '../../../images/icons/twitter.svg';
 
 type Props = {
   image: string;

@@ -36,6 +36,13 @@ export const theme = (options: ThemeOptions) => {
               overflowX: 'hidden',
               p: 0,
             },
+            a: {
+              color: colors.primary.dark,
+
+              ':visited': {
+                color: colors.primary.dark,
+              },
+            },
           },
         },
       },
