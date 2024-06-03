@@ -21,12 +21,27 @@ export const Donate = () => {
         size="medium"
         sx={{
           display: 'flex',
-          flexDirection: ['column', 'row'],
+          flexDirection: {
+            xs: 'column',
+            lg: 'row',
+          },
           justifyContent: 'space-between',
           gap: 10,
         }}
       >
-        <Box sx={{ flexBasis: 450, order: [-1, 1] }}>
+        <Box
+          sx={{
+            flexBasis: 500,
+            order: {
+              xs: -1,
+              lg: 1,
+            },
+            textAlign: {
+              xs: 'center',
+              lg: 'left',
+            },
+          }}
+        >
           <SectionTitle
             eyebrowColor="yellow.50"
             eyebrow={GET_INVOLVED_WORDING.eyebrow}
@@ -42,7 +57,7 @@ export const Donate = () => {
             Donate
           </Button>
         </Box>
-        <Box sx={{ flexBasis: 550 }}>
+        <Box flexBasis={['auto', 550]}>
           <img src={Artwork} alt="Donate section graphic" />
         </Box>
       </Container>

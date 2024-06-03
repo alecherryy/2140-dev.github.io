@@ -25,7 +25,7 @@ export const typography: TypographyOptions = {
   },
   h2: {
     ...headings,
-    fontSize: '4rem',
+    fontSize: '3.5rem',
   },
   h3: {
     ...headings,

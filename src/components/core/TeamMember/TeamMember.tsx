@@ -1,5 +1,13 @@
 import React from 'react';
-import { Box, Link, List, ListItem, Typography } from '@mui/material';
+import {
+  Box,
+  Link,
+  List,
+  ListItem,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import { cardSx, imageSx, linkSx, svgSx } from './TeamMember.styles';
 import { colors } from '../../../theme/colors';
 import Github from '../../../images/icons/github.svg';
@@ -13,6 +21,8 @@ type Props = {
   github?: string;
 };
 export const TeamMember = ({ image, name, role, twitter, github }: Props) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Box sx={cardSx}>
       <Box sx={imageSx}>
@@ -27,7 +37,12 @@ export const TeamMember = ({ image, name, role, twitter, github }: Props) => {
         <Typography variant="h6" mb={0.5}>
           {name}
         </Typography>
-        <Typography variant="body2">{role}</Typography>
+        <Typography
+          variant="body2"
+          fontSize={isMobile ? '0.75rem' : 'inherite'}
+        >
+          {role}
+        </Typography>
         {github && twitter && (
           <List sx={{ display: 'flex', gap: 2 }}>
             {github && (

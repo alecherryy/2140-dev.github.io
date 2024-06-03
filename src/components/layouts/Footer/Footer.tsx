@@ -38,13 +38,28 @@ export const Footer = () => {
     <Container
       size="large"
       sx={{
-        alignItems: 'center',
+        alignItems: {
+          xs: 'column',
+          lg: 'center',
+        },
         display: 'flex',
+        flexDirection: {
+          xs: 'column',
+          lg: 'row',
+        },
+        gap: 3,
         justifyContent: 'space-between',
         py: 2,
       }}
     >
-      <Box sx={{ display: 'flex', gap: 3 }}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          flexDirection: ['column', 'row'],
+          gap: 3,
+        }}
+      >
         <Link
           href={`mailto:${FOOTER_WORDING.email}`}
           sx={{ display: 'inline-flex', gap: 1, alignItems: 'center' }}

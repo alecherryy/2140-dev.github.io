@@ -92,7 +92,7 @@ export const buttonVariantSx: Record<
     fontSize: '2rem',
     letterSpacing: 5,
     height: 100,
-    px: 10,
+    px: [5, 10],
     span: {
       ...spanSx,
       '&::after': {
@@ -123,7 +123,8 @@ export const buttonVariantSx: Record<
     fontSize: '2rem',
     letterSpacing: 5,
     height: 100,
-    px: 10,
+    px: [5, 10],
+    width: ['100%', 'auto'],
     span: {
       ...spanSx,
       '&::after': {

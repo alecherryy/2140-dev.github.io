@@ -4,12 +4,15 @@ import { Container } from '../../layouts/Container/Container';
 import { TeamMember } from '../TeamMember/TeamMember';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { TEAM_WORDING } from 'constants/wording';
+import { Eyebrow } from 'components/core/Eyebrow/Eyebrow';
+import Markdown from 'markdown-to-jsx';
+import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
 
 export const Team = () => {
   return (
-    <Box py={15} pb={30} id="team">
+    <Box py={15} pb={30} id="team" textAlign="center">
       <Container size="small">
-        <Box sx={{ mb: 6, textAlign: 'center' }}>
+        <Box sx={{ mb: 6 }}>
           <SectionTitle
             eyebrow={TEAM_WORDING.eyebrow}
             title={TEAM_WORDING.title}
@@ -17,7 +20,7 @@ export const Team = () => {
           <Typography variant="body1">{TEAM_WORDING.content}</Typography>
         </Box>
       </Container>
-      <Container size="medium" sx={{ mt: 10 }}>
+      <Container size="medium" sx={{ my: 10 }}>
         <Grid container spacing={3}>
           {TEAM_WORDING.team.map((t) => (
             <Grid item key={t.name} xs={12} md={6}>
@@ -31,6 +34,13 @@ export const Team = () => {
             </Grid>
           ))}
         </Grid>
+      </Container>
+      <Container size="small">
+        <Eyebrow color="blue.100" text={TEAM_WORDING.join.eyebrow} />
+        <Typography variant="h5">{TEAM_WORDING.join.subtitle}</Typography>
+        <Typography variant="body1" component="div">
+          <MarkdownRender>{TEAM_WORDING.join.content}</MarkdownRender>
+        </Typography>
       </Container>
     </Box>
   );
