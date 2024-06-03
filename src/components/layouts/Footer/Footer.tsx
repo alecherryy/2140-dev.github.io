@@ -48,7 +48,13 @@ export const Footer = () => {
       }}
     >
       <Typography variant="caption" component="div" fontWeight={600}>
-        <Link href="mailto:test@email.com">test@email.com</Link>
+        <Link href="mailto:hello@2140.dev">hello@2140.dev</Link>
+      </Typography>
+      <Typography variant="caption" component="div">
+        <MarkdownRender>{FOOTER_WORDING.gpg}</MarkdownRender>
+      </Typography>
+      <Typography variant="caption" component="div">
+        <MarkdownRender>{FOOTER_WORDING.foundation}</MarkdownRender>
       </Typography>
       <Typography variant="caption" component="div">
         <MarkdownRender>{FOOTER_WORDING.attribution}</MarkdownRender>
