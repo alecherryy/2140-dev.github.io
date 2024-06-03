@@ -33,11 +33,11 @@ export const Hero = () => {
           <Typography sx={blurbSx} variant="body1">
             {HERO_WORDING.blurb}
           </Typography>
-          <Button component="div" sx={{ mt: 4 }}>
-            <Link smooth duration={200} offset={-80} to="about">
+          <Link smooth duration={200} offset={-80} to="about">
+            <Button component="span" sx={{ mt: 4 }}>
               {HERO_WORDING.button}
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Box>
         <Box sx={backgroundSx}>
           <img src={Background} alt="Background swiggle" />
