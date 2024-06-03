@@ -14,6 +14,7 @@ import { Button } from '../Button/Button';
 import { Container } from 'components/layouts/Container/Container';
 import { HERO_WORDING } from 'constants/wording';
 import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
+import { Link } from 'react-scroll';
 
 export const Hero = () => {
   const handleClick = () => {
@@ -32,8 +33,10 @@ export const Hero = () => {
           <Typography sx={blurbSx} variant="body1">
             {HERO_WORDING.blurb}
           </Typography>
-          <Button sx={{ mt: 4 }} onClick={handleClick}>
-            {HERO_WORDING.button}
+          <Button component="div" sx={{ mt: 4 }}>
+            <Link smooth duration={200} offset={-80} to="about">
+              {HERO_WORDING.button}
+            </Link>
           </Button>
         </Box>
         <Box sx={backgroundSx}>

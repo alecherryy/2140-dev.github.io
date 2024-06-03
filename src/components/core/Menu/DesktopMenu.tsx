@@ -12,8 +12,8 @@ export const DesktopMenu = ({ items }: MenuProps) => {
         {items.map((item) => (
           <ListItem key={item.text} sx={itemSx}>
             <Link
+              smooth
               to={item.anchor}
-              smooth={true}
               duration={500}
               spy={true}
               offset={-80}
