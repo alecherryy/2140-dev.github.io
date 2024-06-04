@@ -10,7 +10,6 @@ export const Donate = () => {
       duration: 500,
       smooth: true,
     });
-    scrollSpy.update();
   }, []);
 
   return (
