@@ -6,14 +6,14 @@ import { Button } from '../Button/Button';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { colors } from '../../../theme/colors';
 import { GET_INVOLVED_WORDING } from 'constants/wording';
-import { SECTION_WRAPPER_STYLES } from 'constants/styles';
+import { Section } from 'components/layouts/Section/Section';
+import { NavLink } from 'react-router-dom';
 
-export const Donate = () => {
+export const GetInvolved = () => {
   return (
-    <Box
+    <Section
       id="getInvolved"
       sx={{
-        ...SECTION_WRAPPER_STYLES,
         background: colors.yellow[200],
       }}
     >
@@ -50,17 +50,20 @@ export const Donate = () => {
           <Typography variant="body1">
             {GET_INVOLVED_WORDING.content}
           </Typography>
-          <Button
-            variant="donate"
-            sx={{ mt: 8, mb: 16, background: 'yellow.50' }}
-          >
-            Donate
-          </Button>
+          <NavLink to="donate">
+            <Button
+              variant="donate"
+              sx={{ mt: 8, mb: 16, background: 'yellow.50' }}
+              component="span"
+            >
+              Donate
+            </Button>
+          </NavLink>
         </Box>
         <Box flexBasis={['auto', 550]}>
           <img src={Artwork} alt="Donate section graphic" />
         </Box>
       </Container>
-    </Box>
+    </Section>
   );
 };

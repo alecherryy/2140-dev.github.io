@@ -8,9 +8,24 @@ import { useMenuContext } from 'providers/MenuProvider/hooks/useMenuContext';
 import { Button } from 'components/core/Button/Button';
 import { colors } from 'theme/colors';
 import { Link } from 'react-scroll';
+import { NavHashLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
 
-export const MobileMenu = ({ items, handleClick }: MenuProps) => {
+export const MobileMenu = ({ items }: MenuProps) => {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useMenuContext();
+
+  const handleClick = (el: HTMLElement) => {
+    const offset = 80;
+    const position = el.getBoundingClientRect().top;
+    const top = position + window.pageYOffset - offset;
+
+    window.scrollTo({
+      top: top,
+      behavior: 'smooth',
+    });
+
+    handleMenuItemClick();
+  };
 
   const handleMenuItemClick = () => {
     const body = document?.querySelector('body');
@@ -28,7 +43,12 @@ export const MobileMenu = ({ items, handleClick }: MenuProps) => {
         <List sx={menuSx}>
           {items.map((item) => (
             <ListItem key={item.text} sx={itemSx}>
-              <Link onClick={handleMenuItemClick} spy={true} to={item.anchor}>
+              <NavHashLink
+                style={{ textDecoration: 'none' }}
+                smooth
+                scroll={(el) => handleClick(el)}
+                to={`/#${item.anchor}`}
+              >
                 <Typography
                   variant="h3"
                   component="span"
@@ -36,7 +56,12 @@ export const MobileMenu = ({ items, handleClick }: MenuProps) => {
                 >
                   {item.text}
                 </Typography>
-              </Link>
+              </NavHashLink>
+              <Link
+                onClick={handleMenuItemClick}
+                spy={true}
+                to={item.anchor}
+              ></Link>
             </ListItem>
           ))}
           <ListItem
@@ -56,7 +81,11 @@ export const MobileMenu = ({ items, handleClick }: MenuProps) => {
               },
             }}
           >
-            <Button variant="large">Donate</Button>
+            <NavLink to="donate" onClick={handleMenuItemClick}>
+              <Button variant="large" component="span">
+                Donate
+              </Button>
+            </NavLink>
           </ListItem>
         </List>
       </Box>

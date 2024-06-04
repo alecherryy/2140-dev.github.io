@@ -7,10 +7,11 @@ import { TEAM_WORDING } from 'constants/wording';
 import { Eyebrow } from 'components/core/Eyebrow/Eyebrow';
 import Markdown from 'markdown-to-jsx';
 import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
+import { Section } from 'components/layouts/Section/Section';
 
 export const Team = () => {
   return (
-    <Box py={15} pb={30} id="team" textAlign="center">
+    <Section id="team" sx={{ textAlign: 'center' }}>
       <Container size="small">
         <Box sx={{ mb: 6 }}>
           <SectionTitle
@@ -42,6 +43,6 @@ export const Team = () => {
           <MarkdownRender>{TEAM_WORDING.join.content}</MarkdownRender>
         </Typography>
       </Container>
-    </Box>
+    </Section>
   );
 };

@@ -82,7 +82,7 @@ export const buttonVariantSx: Record<
       '&::after': { ...pseusdoSx, backgroundColor: 'transparent' },
     },
     '&:hover': {
-      backgroundColor: 'yellow.200',
+      backgroundColor: 'yellow.400',
     },
   },
   large: {

@@ -5,16 +5,25 @@ import { Homepage } from './components/pages/Homepage';
 import { Header } from 'components/layouts/Header/Header';
 import { MenuProvider } from 'providers/MenuProvider/MenuProvider';
 import { Footer } from 'components/layouts/Footer/Footer';
+import { Route, Routes } from 'react-router';
+import { Donate } from 'components/pages/Donate';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <MenuProvider>
-        <Header />
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="*" element={<>Page Not Found</>} />
+          </Routes>
+        </BrowserRouter>
+        <Footer />
       </MenuProvider>
-      <Homepage />
-      <Footer />
     </ThemeProvider>
   );
 }

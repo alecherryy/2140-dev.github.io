@@ -1,30 +1,43 @@
 import React from 'react';
 import { Box, List, ListItem } from '@mui/material';
-import { Link } from 'react-scroll';
 import { itemSx, menuSx } from './DesktopMenu.styles';
 import { MenuProps } from 'components/core/Menu/Menu';
 import { Button } from 'components/core/Button/Button';
+import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 export const DesktopMenu = ({ items }: MenuProps) => {
+  const handleClick = (el: HTMLElement) => {
+    const offset = 80;
+    const position = el.getBoundingClientRect().top;
+    const top = position + window.pageYOffset - offset;
+
+    window.scrollTo({
+      top: top,
+      behavior: 'smooth',
+    });
+  };
   return (
     <Box sx={{ display: 'flex', gap: 5, justifyContent: 'flex-end' }}>
       <List sx={menuSx}>
         {items.map((item) => (
           <ListItem key={item.text} sx={itemSx}>
-            <Link
+            <NavHashLink
+              style={{ textDecoration: 'none' }}
               smooth
-              to={item.anchor}
-              duration={500}
-              spy={true}
-              offset={-80}
-              activeStyle={{ fontWeight: 600 }}
+              scroll={(el) => handleClick(el)}
+              to={`/#${item.anchor}`}
             >
               {item.text}
-            </Link>
+            </NavHashLink>
           </ListItem>
         ))}
       </List>
-      <Button variant="secondary">Donate</Button>
+      <NavLink to="donate">
+        <Button variant="secondary" component="span">
+          Donate
+        </Button>
+      </NavLink>
     </Box>
   );
 };

@@ -5,13 +5,13 @@ import { Container } from '../../layouts/Container/Container';
 import Artwork from '../../../images/about-artwork.svg';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { ABOUT_WORDING } from 'constants/wording';
-import { SECTION_WRAPPER_STYLES } from 'constants/styles';
 import { Eyebrow } from 'components/core/Eyebrow/Eyebrow';
 import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
+import { Section } from 'components/layouts/Section/Section';
 
 export const About = () => {
   return (
-    <Box sx={SECTION_WRAPPER_STYLES} id="about">
+    <Section id="about">
       <Container size="small">
         <Box sx={titleSx}>
           <SectionTitle
@@ -39,6 +39,6 @@ export const About = () => {
           </Box>
         </Box>
       </Container>
-    </Box>
+    </Section>
   );
 };

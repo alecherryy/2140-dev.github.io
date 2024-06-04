@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, useTheme, Typography, useMediaQuery } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import {
   backgroundSx,
   blurbSx,
@@ -17,8 +17,6 @@ import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRendere
 import { Link } from 'react-scroll';
 
 export const Hero = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Box sx={wrapperSx}>
       <Container size="large" sx={containerSx}>
