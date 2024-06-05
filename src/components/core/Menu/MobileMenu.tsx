@@ -2,7 +2,7 @@ import React from 'react';
 import { List, ListItem, Box, ButtonBase, Typography } from '@mui/material';
 import MenuOpen from '../../../images/menu-open.svg';
 import MenuClose from '../../../images/menu-close.svg';
-import { buttonSx, iconSx, itemSx, menuSx } from './MobileMenu.styles';
+import { buttonSx, iconSx, mobileItemSx, mobileMenuSx } from './Menu.styles';
 import { MenuProps } from 'components/core/Menu/Menu';
 import { useMenuContext } from 'providers/MenuProvider/hooks/useMenuContext';
 import { Button } from 'components/core/Button/Button';
@@ -40,9 +40,9 @@ export const MobileMenu = ({ items }: MenuProps) => {
     <Box>
       <MenuIcon isOpen={isMobileMenuOpen} handleClick={handleMenuItemClick} />
       <Box sx={{ display: isMobileMenuOpen ? 'block' : 'none' }}>
-        <List sx={menuSx}>
+        <List sx={mobileMenuSx}>
           {items.map((item) => (
-            <ListItem key={item.text} sx={itemSx}>
+            <ListItem key={item.text} sx={mobileItemSx}>
               <NavHashLink
                 style={{ textDecoration: 'none' }}
                 smooth
@@ -66,7 +66,7 @@ export const MobileMenu = ({ items }: MenuProps) => {
           ))}
           <ListItem
             sx={{
-              ...itemSx,
+              ...mobileItemSx,
               position: 'static',
               mt: 20,
               '&::before': {

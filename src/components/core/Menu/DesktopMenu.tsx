@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, List, ListItem } from '@mui/material';
-import { itemSx, menuSx } from './DesktopMenu.styles';
+import { desktopItemSx, desktopMenuSx } from './Menu.styles';
 import { MenuProps } from 'components/core/Menu/Menu';
 import { Button } from 'components/core/Button/Button';
 import { NavLink } from 'react-router-dom';
@@ -19,9 +19,9 @@ export const DesktopMenu = ({ items }: MenuProps) => {
   };
   return (
     <Box sx={{ display: 'flex', gap: 5, justifyContent: 'flex-end' }}>
-      <List sx={menuSx}>
+      <List sx={desktopMenuSx}>
         {items.map((item) => (
-          <ListItem key={item.text} sx={itemSx}>
+          <ListItem key={item.text} sx={desktopItemSx}>
             <NavHashLink
               style={{ textDecoration: 'none' }}
               smooth
