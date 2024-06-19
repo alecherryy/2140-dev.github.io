@@ -10,20 +10,10 @@ interface MenuItem {
 
 export interface MenuProps {
   items: MenuItem[];
-  handleClick: (e: MouseEvent<HTMLAnchorElement>, id: string) => void;
 }
-
-const handleClick = (e: MouseEvent, id: string) => {
-  e.preventDefault();
-
-  document
-    ?.querySelector(id)
-    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-};
 
 const commonProps: MenuProps = {
   items: MENU_ITEMS,
-  handleClick: handleClick,
 };
 
 interface Props {

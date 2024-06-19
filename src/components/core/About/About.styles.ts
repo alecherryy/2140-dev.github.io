@@ -8,11 +8,11 @@ export const wrapperSx: SxProps = {
     md: 'row',
   },
   gap: 6,
+  pt: 5,
   justifyContent: 'space-between',
 };
 
 export const titleSx: SxProps = {
-  flexBasis: '100%',
   mb: 6,
   textAlign: 'center',
   textWrap: {
@@ -24,14 +24,14 @@ export const titleSx: SxProps = {
 export const contentSx: SxProps = {
   flexBasis: {
     xs: 'auto',
-    md: 450,
+    md: 500,
   },
 };
 
 export const imageSx: SxProps = {
   flexBasis: {
     xs: 'auto',
-    md: 600,
+    md: 500,
   },
 
   img: {

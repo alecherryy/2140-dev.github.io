@@ -23,7 +23,7 @@ export const containerSx: SxProps = {
 export const leftSx: SxProps = {
   flexBasis: '50%',
   minWidth: '50%',
-  paddingLeft: {
+  pl: {
     xs: 0,
     lg: 6,
   },
@@ -31,11 +31,14 @@ export const leftSx: SxProps = {
     xs: 10,
     lg: 0,
   },
+  h1: {
+    whiteSpace: 'nowrap',
+  },
 };
 
 export const backgroundSx: SxProps = {
   position: 'absolute',
-  right: '-5%',
+  right: '-8%',
   top: 0,
   zIndex: -1,
   '::after': {
@@ -53,14 +56,13 @@ export const backgroundSx: SxProps = {
 export const imageSx: SxProps = {
   maxWidth: '100%',
   position: {
-    lg: 'absolute',
+    xl: 'absolute',
   },
   right: 0,
   zIndex: -1,
 };
 
 export const blurbSx: SxProps = {
-  fontSize: '1.25rem',
   mt: 1,
-  maxWidth: 480,
+  maxWidth: 600,
 };

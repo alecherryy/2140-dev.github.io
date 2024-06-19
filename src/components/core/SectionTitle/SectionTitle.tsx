@@ -12,7 +12,7 @@ type Props = {
 export const SectionTitle = ({
   eyebrow,
   title,
-  eyebrowColor = 'yellow.200',
+  eyebrowColor = 'yellow.300',
   sx,
 }: Props) => {
   return (

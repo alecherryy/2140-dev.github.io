@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Box, ButtonBase } from '@mui/material';
 import { useMenuContext } from 'providers/MenuProvider/hooks/useMenuContext';
+import { NavLink } from 'react-router-dom';
 
 export const Logo = () => {
   const theme = useTheme();
@@ -19,7 +20,9 @@ export const Logo = () => {
 
   return (
     <Box sx={{ position: 'relative', zIndex: 13 }}>
-      <ButtonBase onClick={handleClick}>LOGO</ButtonBase>
+      <NavLink to="/">
+        <ButtonBase onClick={handleClick}>LOGO</ButtonBase>
+      </NavLink>
     </Box>
   );
 };

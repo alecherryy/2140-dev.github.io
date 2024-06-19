@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import pickBy from 'lodash/pickBy';
 import Markdown from 'markdown-to-jsx';
-import React, { ComponentType, FC, createElement } from 'react';
+import React, { ComponentType, createElement } from 'react';
 
 interface ComponentsOverrides {
   [name: string]: ComponentType<any>;

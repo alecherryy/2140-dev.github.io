@@ -2,35 +2,36 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { contentSx, imageSx, titleSx, wrapperSx } from './About.styles';
 import { Container } from '../../layouts/Container/Container';
-import BoxIcon from '../../../images/box-icon.svg';
 import Artwork from '../../../images/about-artwork.svg';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { ABOUT_WORDING } from 'constants/wording';
-import { SECTION_WRAPPER_STYLES } from 'constants/styles';
+import { Eyebrow } from 'components/core/Eyebrow/Eyebrow';
+import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
+import { Section } from 'components/layouts/Section/Section';
 
 export const About = () => {
   return (
-    <Box sx={SECTION_WRAPPER_STYLES} id="about">
+    <Section id="about">
       <Container size="small">
         <Box sx={titleSx}>
           <SectionTitle
             eyebrow={ABOUT_WORDING.eyebrow}
             title={ABOUT_WORDING.title}
           />
-          <Typography variant="body1" maxWidth={500} mx="auto">
-            {ABOUT_WORDING.content}
-          </Typography>
+          <Typography variant="body1">{ABOUT_WORDING.blurb}</Typography>
         </Box>
       </Container>
       <Container size="medium">
         <Box sx={wrapperSx}>
           <Box sx={contentSx}>
-            <img src={BoxIcon} width={64} alt="Icon of a computing cloud" />
-            <Typography variant="h5">{ABOUT_WORDING.subtitle}</Typography>
-            {ABOUT_WORDING.paragraphs.map((paragraph, index) => (
-              <Typography key={index} variant="body1">
-                {paragraph}
-              </Typography>
+            {ABOUT_WORDING.sections.map((section, i) => (
+              <Box key={i} mb={6}>
+                <Eyebrow text={section.eyebrow} color="blue.100" />
+                <Typography variant="h5">{section.subtitle}</Typography>
+                <Typography variant="body1">
+                  <MarkdownRender>{section.content}</MarkdownRender>
+                </Typography>
+              </Box>
             ))}
           </Box>
           <Box sx={imageSx}>
@@ -38,6 +39,6 @@ export const About = () => {
           </Box>
         </Box>
       </Container>
-    </Box>
+    </Section>
   );
 };

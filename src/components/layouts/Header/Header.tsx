@@ -38,7 +38,7 @@ export const Header = () => {
     <Box
       ref={ref}
       sx={{
-        color: colors.yellow[50],
+        color: 'primary.main',
         position: 'absolute',
         overflow: 'hidden',
         width: '100%',
@@ -54,13 +54,13 @@ export const Header = () => {
       }}
     >
       <Container
+        size="large"
         sx={{
           alignItems: 'center',
           height: 80,
           display: 'flex',
           justifyContent: 'space-between',
         }}
-        size="large"
       >
         <Logo />
         <Menu isMobile={isMobile} />
