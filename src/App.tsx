@@ -17,9 +17,8 @@ function App() {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<Homepage />} />
             <Route path="/donate" element={<Donate />} />
-            <Route path="*" element={<>Page Not Found</>} />
+            <Route path="*" element={<Homepage />} />
           </Routes>
         </BrowserRouter>
         <Footer />

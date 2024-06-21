@@ -4,6 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Box, ButtonBase } from '@mui/material';
 import { useMenuContext } from 'providers/MenuProvider/hooks/useMenuContext';
 import { NavLink } from 'react-router-dom';
+import LogoImage from '../../../images/logo.svg';
 
 export const Logo = () => {
   const theme = useTheme();
@@ -19,9 +20,11 @@ export const Logo = () => {
   };
 
   return (
-    <Box sx={{ position: 'relative', zIndex: 13 }}>
+    <Box sx={{ position: 'relative', zIndex: 13, maxWidth: 66 }}>
       <NavLink to="/">
-        <ButtonBase onClick={handleClick}>LOGO</ButtonBase>
+        <ButtonBase onClick={handleClick}>
+          <img src={LogoImage} alt="2140 Logo" />
+        </ButtonBase>
       </NavLink>
     </Box>
   );
