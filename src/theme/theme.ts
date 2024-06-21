@@ -28,7 +28,7 @@ export const theme = (options: ThemeOptions) => {
             },
             body: {
               margin: 0,
-              backgroundColor: colors.yellow[50],
+              backgroundColor: '#fff',
               color: colors.primary.dark,
               fontFamily: typeface.text,
               lineHeight: 1.15,
