@@ -34,7 +34,7 @@ export const TeamMember = ({ image, name, role, twitter, github }: Props) => {
         </figure>
       </Box>
       <Box>
-        <Typography variant="h6" mb={0.5}>
+        <Typography variant="h6" mb={0.5} textAlign="left">
           {name}
         </Typography>
         <Typography
