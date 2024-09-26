@@ -71,7 +71,7 @@ export const MobileMenu = ({ items }: MenuProps) => {
               mt: 20,
               '&::before': {
                 content: '""',
-                background: colors.yellow[50],
+                background: colors.yellow[200],
                 position: 'absolute',
                 height: '100vh',
                 borderRadius: '100%',
@@ -82,7 +82,7 @@ export const MobileMenu = ({ items }: MenuProps) => {
             }}
           >
             <NavLink to="donate" onClick={handleMenuItemClick}>
-              <Button variant="large" component="span">
+              <Button variant="donate" component="span">
                 Donate
               </Button>
             </NavLink>

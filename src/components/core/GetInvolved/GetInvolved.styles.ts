@@ -22,7 +22,7 @@ export const donateWrapperSx: SxProps = {
 };
 
 export const buttonSx: SxProps = {
-  background: colors.yellow[50],
+  background: colors.primary.light,
   borderRadius: 100,
   p: 3,
   paddingLeft: 5,

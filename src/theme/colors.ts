@@ -2,6 +2,7 @@ export const colors = {
   primary: {
     main: '#212121',
     dark: '#303030',
+    light: '#fff',
   },
   yellow: {
     50: '#FFFBF4',

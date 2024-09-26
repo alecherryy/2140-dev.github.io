@@ -47,7 +47,7 @@ export const Header = () => {
         ...((isSticky || isMobile) && { position: 'fixed' }),
         ...(!isMobile &&
           isSticky && {
-            background: colors.yellow[50],
+            background: colors.primary.light,
             color: colors.primary.main,
             boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
           }),

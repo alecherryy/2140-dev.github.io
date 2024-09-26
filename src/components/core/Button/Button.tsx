@@ -7,7 +7,7 @@ import { commonButtonSx, buttonVariantSx } from './Button.styles';
 type Props = Omit<ButtonProps, 'sx' | 'variant'> & {
   children?: ReactNode;
   sx?: SystemStyleObject;
-  variant?: 'primary' | 'secondary' | 'large' | 'donate';
+  variant?: 'primary' | 'secondary' | 'donate';
 };
 
 export const Button = ({
@@ -32,7 +32,6 @@ export const Button = ({
 const strokeColor: Record<string, string> = {
   primary: colors.primary.main,
   secondary: 'transparent',
-  large: colors.yellow[50],
   donate: colors.primary.main,
 };
 const OutlineCircle = ({ variant = 'primary' }: Pick<Props, 'variant'>) => {

@@ -45,7 +45,7 @@ export const commonButtonSx: SystemStyleObject = {
 };
 
 export const buttonVariantSx: Record<
-  'primary' | 'secondary' | 'large' | 'donate',
+  'primary' | 'secondary' | 'donate',
   SystemStyleObject
 > = {
   primary: {
@@ -83,37 +83,6 @@ export const buttonVariantSx: Record<
     },
     '&:hover': {
       backgroundColor: 'yellow.400',
-    },
-  },
-  large: {
-    backgroundColor: 'yellow.200',
-    fontWeight: 600,
-    borderRadius: 100,
-    fontSize: '2rem',
-    letterSpacing: 5,
-    height: 100,
-    px: [5, 10],
-    span: {
-      ...spanSx,
-      '&::after': {
-        ...pseusdoSx,
-        backgroundColor: colors.primary.main,
-      },
-    },
-    '&:hover': {
-      backgroundColor: 'yellow.300',
-      color: 'yellow.50',
-      span: {
-        '&::after': {
-          background: colors.primary.main,
-          backgroundImage: `url(${Arrow})`,
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        },
-      },
-      svg: {
-        transform: 'rotate(0deg)',
-      },
     },
   },
   donate: {

@@ -1,5 +1,5 @@
 import { Box, SxProps, Typography } from '@mui/material';
-import { colors } from '../../../theme/colors';
+import Line from '../../../images/strikethrough.svg';
 import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
 import { Eyebrow } from 'components/core/Eyebrow/Eyebrow';
 
@@ -16,7 +16,31 @@ export const SectionTitle = ({
   sx,
 }: Props) => {
   return (
-    <Box sx={sx}>
+    <Box
+      sx={{
+        s: {
+          textDecoration: 'none',
+          position: 'relative',
+          '&::after': {
+            content: '""',
+            position: 'absolute',
+            top: '50%',
+            left: '-2.5%',
+            // right: '-0.5rem',
+            height: '1rem',
+
+            // Position the line behind the text so that
+            // it is still easily readable
+            zIndex: 1,
+            width: '105%',
+            backgroundImage: `url('${Line}')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+          },
+        },
+        ...sx,
+      }}
+    >
       <Eyebrow text={eyebrow} color={eyebrowColor} />
       <Typography variant="h2">
         <MarkdownRender>{title}</MarkdownRender>

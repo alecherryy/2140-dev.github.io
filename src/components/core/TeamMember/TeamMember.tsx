@@ -37,10 +37,7 @@ export const TeamMember = ({ image, name, role, twitter, github }: Props) => {
         <Typography variant="h6" mb={0.5} textAlign="left">
           {name}
         </Typography>
-        <Typography
-          variant="body2"
-          fontSize={isMobile ? '0.75rem' : 'inherite'}
-        >
+        <Typography variant="body2" fontSize={isMobile ? '0.75rem' : 'inherit'}>
           {role}
         </Typography>
         {github && twitter && (
@@ -74,7 +71,7 @@ const OutlineCircle = () => {
         cy="55"
         r="54.5"
         style={{
-          stroke: colors.yellow[400],
+          stroke: colors.primary.light,
           strokeWidth: 1,
           strokeDasharray: 280,
         }}

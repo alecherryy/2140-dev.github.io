@@ -8,6 +8,7 @@ import { ABOUT_WORDING } from 'constants/wording';
 import { Eyebrow } from 'components/core/Eyebrow/Eyebrow';
 import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
 import { Section } from 'components/layouts/Section/Section';
+import { typeface } from 'theme/typography';
 
 export const About = () => {
   return (

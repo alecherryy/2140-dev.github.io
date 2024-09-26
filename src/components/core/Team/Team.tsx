@@ -11,9 +11,9 @@ import { Section } from 'components/layouts/Section/Section';
 
 export const Team = () => {
   return (
-    <Section id="team" sx={{ textAlign: 'center' }}>
+    <Section id="team">
       <Container size="small">
-        <Box sx={{ mb: 6 }}>
+        <Box sx={{ mb: 6, textAlign: 'center' }}>
           <SectionTitle
             eyebrow={TEAM_WORDING.eyebrow}
             title={TEAM_WORDING.title}
@@ -36,7 +36,7 @@ export const Team = () => {
           ))}
         </Grid>
       </Container>
-      <Container size="small">
+      <Container size="small" sx={{ textAlign: 'center' }}>
         <Eyebrow color="blue.100" text={TEAM_WORDING.join.eyebrow} />
         <Typography variant="h5">{TEAM_WORDING.join.subtitle}</Typography>
         <Typography variant="body1" component="div">

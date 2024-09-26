@@ -23,7 +23,7 @@ export const FOOTER_WORDING = {
 };
 
 export const HERO_WORDING = {
-  title: `Supporting<br />Bitcoin to 2140<br />and beyond`,
+  title: `Supporting<br />Bitcoin to 2140<br />and <u>beyond</u>`,
   blurb: `2140 is a European non-profit organization (NGO) dedicated to supporting Bitcoin research and development. Our mission is to provide protocol veterans with long-term stability through employment in our Amsterdam office and to onboard aspiring contributors.`,
   button: `Read more`,
 };
@@ -45,7 +45,7 @@ export const ABOUT_WORDING = {
 
 export const TEAM_WORDING = {
   eyebrow: '02 — Team',
-  title: 'Meet the Team',
+  title: 'Meet the team',
   content: `We are a mix of long-term contributors and researchers united by a common goal: to support Bitcoin until the last subsidy is mined, and beyond.`,
   team: [
     {

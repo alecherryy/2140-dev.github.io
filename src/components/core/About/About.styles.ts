@@ -15,6 +15,7 @@ export const wrapperSx: SxProps = {
 export const titleSx: SxProps = {
   mb: 6,
   textAlign: 'center',
+  position: 'relative',
   textWrap: {
     xs: 'inherit',
     md: 'balance',

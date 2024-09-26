@@ -5,6 +5,7 @@ import { CSSProperties } from 'react';
 export const typeface = {
   // heading: 'Bricolage Grotesque, monospace',
   text: 'Poppins, monospace',
+  accent: 'Gochi Hand, cursive',
 };
 
 const headings: CSSProperties = {

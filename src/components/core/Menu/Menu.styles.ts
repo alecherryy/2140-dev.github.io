@@ -22,7 +22,7 @@ export const desktopItemSx: SxProps = {
 
 export const mobileMenuSx: SxProps = {
   alignItems: 'center',
-  background: colors.yellow[200],
+  background: colors.primary.light,
   display: 'flex',
   flexDirection: 'column',
   height: '100vh',

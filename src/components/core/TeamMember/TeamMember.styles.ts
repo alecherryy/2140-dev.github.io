@@ -2,7 +2,7 @@ import { SxProps } from '@mui/material';
 import { colors } from '../../../theme/colors';
 
 const SIZE = {
-  xs: 60,
+  xs: 50,
   md: 80,
 };
 export const cardSx: SxProps = {
@@ -44,11 +44,11 @@ export const svgSx: SxProps = {
 
   svg: {
     height: {
-      xs: 90,
+      xs: 70,
       md: 110,
     },
     width: {
-      xs: 90,
+      xs: 70,
       md: 110,
     },
   },
