@@ -41,7 +41,6 @@ export const leftSx: SxProps = {
     zIndex: 1,
     '&::after': {
       content: '""',
-      color: colors.yellow[400],
       position: 'absolute',
       bottom: {
         xs: 0,
@@ -50,23 +49,11 @@ export const leftSx: SxProps = {
       left: '-0.5rem',
       right: '-0.5rem',
       height: '1rem',
-
-      // Position the line behind the text so that
-      // it is still easily readable
       zIndex: -1,
       width: '105%',
-
-      // The SVG is added as an SVG background image
-      backgroundImage: `url('${Line}')`,
       backgroundRepeat: 'no-repeat',
-
-      // This allows the SVG to flex in size to fit
-      // any length of word. If the word is short,
-      // the SVG will be stretched vertically, if it
-      // is long, the SVG will be stretched horizontally.
-      // The jagged nature of this particular SVG works
-      // with this transforming.
       backgroundSize: 'contain',
+      backgroundImage: `url('${Line}')`,
     },
   },
 };

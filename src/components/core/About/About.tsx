@@ -13,16 +13,14 @@ import { typeface } from 'theme/typography';
 export const About = () => {
   return (
     <Section id="about">
-      <Container size="small">
-        <Box sx={titleSx}>
-          <SectionTitle
-            eyebrow={ABOUT_WORDING.eyebrow}
-            title={ABOUT_WORDING.title}
-          />
-          <Typography variant="body1">{ABOUT_WORDING.blurb}</Typography>
-        </Box>
+      <Container size="sm" sx={titleSx}>
+        <SectionTitle
+          eyebrow={ABOUT_WORDING.eyebrow}
+          title={ABOUT_WORDING.title}
+        />
+        <Typography variant="body1">{ABOUT_WORDING.blurb}</Typography>
       </Container>
-      <Container size="medium">
+      <Container size="md">
         <Box sx={wrapperSx}>
           <Box sx={contentSx}>
             {ABOUT_WORDING.sections.map((section, i) => (

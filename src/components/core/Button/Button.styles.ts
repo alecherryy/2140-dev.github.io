@@ -86,7 +86,7 @@ export const buttonVariantSx: Record<
     },
   },
   donate: {
-    backgroundColor: 'yellow.50',
+    backgroundColor: 'primary.white',
     fontWeight: 600,
     borderRadius: 100,
     fontSize: '2rem',

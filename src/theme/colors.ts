@@ -2,7 +2,7 @@ export const colors = {
   primary: {
     main: '#212121',
     dark: '#303030',
-    light: '#fff',
+    white: '#fff',
   },
   yellow: {
     50: '#FFFBF4',
@@ -12,9 +12,7 @@ export const colors = {
     400: '#E3B100',
   },
   gray: {
-    50: '#b4b3af',
     100: '#9e9c99',
-    200: '#444444',
   },
   blue: {
     100: '#62CCEF',

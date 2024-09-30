@@ -47,14 +47,14 @@ export const Header = () => {
         ...((isSticky || isMobile) && { position: 'fixed' }),
         ...(!isMobile &&
           isSticky && {
-            background: colors.primary.light,
+            background: colors.primary.white,
             color: colors.primary.main,
             boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
           }),
       }}
     >
       <Container
-        size="large"
+        size="lg"
         sx={{
           alignItems: 'center',
           height: 80,

@@ -1,8 +1,15 @@
 import React, { useEffect } from 'react';
+import Underline from '../../images/underline-yellow.svg';
+import Artwork from '../../images/donate-artwork.svg';
 import { Container } from 'components/layouts/Container/Container';
-import { Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import { Section } from 'components/layouts/Section/Section';
-import { animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
+import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
+import { SectionTitle } from 'components/core/SectionTitle/SectionTitle';
+import { DONATE_WORDING } from 'constants/wording';
+import { Accordion } from 'components/core/Accordion/Accordion';
+const { page, faqs, donate } = DONATE_WORDING;
 
 export const Donate = () => {
   useEffect(() => {
@@ -13,42 +20,53 @@ export const Donate = () => {
   }, []);
 
   return (
-    <Section>
-      <Container size="small">
-        <Typography variant="h1">
-          This is where your donate page goes
-        </Typography>
-        <Typography component="div">
-          Lorem ipsum dolor sit amet, ex eos esse vocibus philosophia. Has ei
-          essent adversarium, sea ea suas necessitatibus, at duo tamquam
-          accusam. Eu probo inani molestiae usu, mei ut exerci quaestio, hinc
-          commodo bonorum ei eam. Eu pro euismod tractatos interpretaris, qui in
-          impetus percipitur. Ex salutandi efficiantur usu, has quem praesent
-          partiendo ut, delicata salutatus persequeris mei te.
-          <br />
-          <br />
-          Vivendum persecuti no duo, ius nullam recusabo id, vim malorum
-          ponderum id. At tibique mentitum interpretaris usu, possim nusquam ut
-          mea. Sea meis semper eu. Te sint probatus ius, duo novum principes an,
-          sed te diceret tincidunt. Vel et iusto dicit intellegebat. Qui no
-          lorem elitr veritus. Veri pericula est no.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet, ex eos esse vocibus philosophia. Has ei
-          essent adversarium, sea ea suas necessitatibus, at duo tamquam
-          accusam. Eu probo inani molestiae usu, mei ut exerci quaestio, hinc
-          commodo bonorum ei eam. Eu pro euismod tractatos interpretaris, qui in
-          impetus percipitur. Ex salutandi efficiantur usu, has quem praesent
-          partiendo ut, delicata salutatus persequeris mei te.
-          <br />
-          <br />
-          Vivendum persecuti no duo, ius nullam recusabo id, vim malorum
-          ponderum id. At tibique mentitum interpretaris usu, possim nusquam ut
-          mea. Sea meis semper eu. Te sint probatus ius, duo novum principes an,
-          sed te diceret tincidunt. Vel et iusto dicit intellegebat. Qui no
-          lorem elitr veritus. Veri pericula est no.
-        </Typography>
-      </Container>
-    </Section>
+    <>
+      <Section>
+        <Container size="sm" sx={{ pt: 10, textAlign: 'center' }}>
+          <Typography
+            variant="h1"
+            sx={{
+              textWrap: 'balance',
+              u: {
+                textDecoration: 'none',
+                position: 'relative',
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: '0.25rem',
+                  left: '1rem',
+                  height: '1rem',
+                  width: '105%',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'contain',
+                  backgroundImage: `url('${Underline}')`,
+                },
+              },
+            }}
+          >
+            <MarkdownRender>{page.title}</MarkdownRender>
+          </Typography>
+          <Typography mb={6}>{page.content}</Typography>
+          <img src={Artwork} alt="Tech inspired artwork" />
+        </Container>
+      </Section>
+      <Section>
+        <Container size="md">
+          <Grid container spacing={['5rem', '10rem']}>
+            <Grid item xs={12} md={6}>
+              <SectionTitle
+                eyebrow={faqs.eyebrow}
+                title={faqs.title}
+                eyebrowColor="blue.100"
+              />
+              <Typography>{faqs.content}</Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Accordion sx={{ pt: 4 }} items={faqs.items} />
+            </Grid>
+          </Grid>
+        </Container>
+      </Section>
+    </>
   );
 };

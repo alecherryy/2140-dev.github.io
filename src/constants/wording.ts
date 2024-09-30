@@ -72,10 +72,79 @@ export const TEAM_WORDING = {
 
 export const GET_INVOLVED_WORDING = {
   eyebrow: '3 — Get Involved',
-  title: 'Get involved in our mission',
+  title: 'Get involved in our <u>mission</u>',
   content: `2140 is not a business: we are a non-profit with 100% of donations being used to provide employment for Bitcoin contributors. Our aim is to do this sustainably, which is only possible with community support.`,
   button: {
     title: 'Support our mission',
     text: 'Join us in empowering this vital work',
+  },
+};
+
+export const DONATE_WORDING = {
+  page: {
+    title: `Get involved in our <u>mission</u>`,
+    content: `2140 is not a business: we are a non-profit with 100% of donations
+    being used to provide employment for Bitcoin contributors. Our aim
+    is to do this sustainably, which is only possible with community
+    support.`,
+  },
+  faqs: {
+    eyebrow: '1 - Learn more',
+    title: 'Frequently Asked Questions',
+    content: `Lorem ipsum dolor sit amet, ex eos esse vocibus philosophia. Has
+  ei essent adversarium, sea ea suas necessitatibus, at duo tamquam
+  accusam.`,
+    items: [
+      {
+        title: 'Lorem ipsum dolor sit amet, ex eos esse vocibus philosophia?',
+        content: `Has ei
+        essent adversarium, sea ea suas necessitatibus, at duo tamquam
+        accusam. Eu probo inani molestiae usu, mei ut exerci quaestio, hinc
+        commodo bonorum ei eam. Eu pro euismod tractatos interpretaris, qui in
+        impetus percipitur.`,
+      },
+      {
+        title: 'Vivendum persecuti no duo, ius nullam recusabo id?',
+        content: `Te sint probatus ius, duo novum principes an,
+        sed te diceret tincidunt. Vel et iusto dicit intellegebat. Qui no
+        lorem elitr veritus. Veri pericula est no.`,
+      },
+      {
+        title: 'Te sint probatus ius, duo novum principes?',
+        content: `Vel et iusto dicit intellegebat.`,
+      },
+      {
+        title: 'Lorem ipsum dolor sit amet, ex eos esse vocibus philosophia?',
+        content: `Has ei
+        essent adversarium, sea ea suas necessitatibus, at duo tamquam
+        accusam. Eu probo inani molestiae usu, mei ut exerci quaestio, hinc
+        commodo bonorum ei eam. Eu pro euismod tractatos interpretaris, qui in
+        impetus percipitur.`,
+      },
+      {
+        title: 'Vivendum persecuti no duo, ius nullam recusabo id?',
+        content: `Te sint probatus ius, duo novum principes an,
+        sed te diceret tincidunt. Vel et iusto dicit intellegebat. Qui no
+        lorem elitr veritus. Veri pericula est no.`,
+      },
+      {
+        title: 'Te sint probatus ius, duo novum principes?',
+        content: `Vel et iusto dicit intellegebat.`,
+      },
+      {
+        title: ' Eu probo inani molestiae usu, mei ut exerci quaestio?',
+        content: `Eu probo inani molestiae usu, mei ut exerci quaestio, hinc
+        commodo bonorum ei eam. Eu pro euismod tractatos interpretaris, qui in
+        impetus percipitur.`,
+      },
+    ],
+  },
+  donate: {
+    eyebrow: `2 — Donate`,
+    title: 'Start supporting Bitcoin developers',
+    content: `Lorem ipsum dolor sit amet, ex eos esse vocibus philosophia. Has
+    ei essent adversarium, sea ea suas necessitatibus, at duo tamquam
+    accusam. Eu probo inani molestiae usu, mei ut exerci quaestio,
+    hinc commodo bonorum ei eam.`,
   },
 };

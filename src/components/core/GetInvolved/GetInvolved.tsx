@@ -1,10 +1,9 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Container } from '../../layouts/Container/Container';
-import Artwork from '../../../images/donate-artwork.svg';
+import Artwork from '../../../images/get-involved-artwork.svg';
 import { Button } from '../Button/Button';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
-import { colors } from '../../../theme/colors';
 import { GET_INVOLVED_WORDING } from 'constants/wording';
 import { Section } from 'components/layouts/Section/Section';
 import { NavLink } from 'react-router-dom';
@@ -14,11 +13,11 @@ export const GetInvolved = () => {
     <Section
       id="getInvolved"
       sx={{
-        background: colors.yellow[200],
+        backgroundColor: 'yellow.200',
       }}
     >
       <Container
-        size="medium"
+        size="md"
         sx={{
           display: 'flex',
           flexDirection: {

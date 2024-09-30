@@ -71,7 +71,7 @@ const OutlineCircle = () => {
         cy="55"
         r="54.5"
         style={{
-          stroke: colors.primary.light,
+          stroke: colors.primary.white,
           strokeWidth: 1,
           strokeDasharray: 280,
         }}

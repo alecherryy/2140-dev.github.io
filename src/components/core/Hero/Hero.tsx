@@ -19,7 +19,7 @@ import { Link } from 'react-scroll';
 export const Hero = () => {
   return (
     <Box sx={wrapperSx}>
-      <Container size="large" sx={containerSx}>
+      <Container size="lg" sx={containerSx}>
         <Box sx={leftSx}>
           <Typography variant="h1">
             <MarkdownRender>{HERO_WORDING.title}</MarkdownRender>

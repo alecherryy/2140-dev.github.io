@@ -20,7 +20,7 @@ export const Logo = () => {
   };
 
   return (
-    <Box sx={{ position: 'relative', zIndex: 99, maxWidth: 66 }}>
+    <Box sx={{ position: 'relative', zIndex: 99, maxWidth: 80 }}>
       <NavLink to="/">
         <ButtonBase onClick={handleClick}>
           <img src={LogoImage} alt="2140 Logo" />

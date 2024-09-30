@@ -36,7 +36,7 @@ export const Footer = () => {
 
   return (
     <Container
-      size="large"
+      size="lg"
       sx={{
         alignItems: {
           xs: 'column',
