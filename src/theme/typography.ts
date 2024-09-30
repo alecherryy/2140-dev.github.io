@@ -52,11 +52,11 @@ export const typography: TypographyOptions = {
     marginBottom: '0.5rem',
   },
   body2: {
-    fontSize: '0.9rem',
+    fontSize: '0.85rem',
     marginBottom: '0.5rem',
   },
   caption: {
     fontSize: '0.75rem',
-    color: colors.gray[100],
+    color: colors.gray[200],
   },
 };

@@ -83,10 +83,9 @@ export const GET_INVOLVED_WORDING = {
 export const DONATE_WORDING = {
   page: {
     title: `Get involved in our <u>mission</u>`,
-    content: `2140 is not a business: we are a non-profit with 100% of donations
-    being used to provide employment for Bitcoin contributors. Our aim
-    is to do this sustainably, which is only possible with community
-    support.`,
+    content: `We are committed to the continous development and progress of Bitcoin; this is why, 100% of your donation goes to supporting the Bitcoin contributors at 2140. You can make a one-time donation or set up a recurring payment method. We appreciate your help and support.`,
+    disclaimer:
+      'We support the following payment methods: Bitcoin, Lightning, SEPA & Credit Cards.',
   },
   faqs: {
     eyebrow: '1 - Learn more',

@@ -2,14 +2,15 @@ import React, { useEffect } from 'react';
 import Underline from '../../images/underline-yellow.svg';
 import Artwork from '../../images/donate-artwork.svg';
 import { Container } from 'components/layouts/Container/Container';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Link, Typography } from '@mui/material';
 import { Section } from 'components/layouts/Section/Section';
 import { animateScroll as scroll } from 'react-scroll';
 import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRenderer';
 import { SectionTitle } from 'components/core/SectionTitle/SectionTitle';
 import { DONATE_WORDING } from 'constants/wording';
 import { Accordion } from 'components/core/Accordion/Accordion';
-const { page, faqs, donate } = DONATE_WORDING;
+import { Button } from 'components/core/Button/Button';
+const { page, faqs } = DONATE_WORDING;
 
 export const Donate = () => {
   useEffect(() => {
@@ -46,8 +47,39 @@ export const Donate = () => {
           >
             <MarkdownRender>{page.title}</MarkdownRender>
           </Typography>
-          <Typography mb={6}>{page.content}</Typography>
-          <img src={Artwork} alt="Tech inspired artwork" />
+          <Typography>
+            <MarkdownRender>{page.content}</MarkdownRender>
+          </Typography>
+          <Box
+            sx={{
+              my: 6,
+              maxWidth: 400,
+              mx: 'auto',
+            }}
+          >
+            <Link
+              sx={{
+                backgroundColor: 'yellow.200',
+                borderRadius: 200,
+                display: 'inline-block',
+                p: 3,
+                textDecoration: 'none',
+                width: '100%',
+              }}
+              target="_blank"
+              href="https://pay.zaprite.com/pl_7BDIKjO3bZ"
+            >
+              <Typography variant="h4" component="span">
+                Make a donation
+              </Typography>
+            </Link>
+            <Typography sx={{ mt: 2 }} variant="caption" component="p">
+              {page.disclaimer}
+            </Typography>
+          </Box>
+          <figure>
+            <img src={Artwork} alt="Tech inspired artwork" />
+          </figure>
         </Container>
       </Section>
       <Section>

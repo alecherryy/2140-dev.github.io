@@ -69,7 +69,7 @@ export const buttonVariantSx: Record<
   },
   secondary: {
     backgroundColor: 'primary.main',
-    color: 'yellow.50',
+    color: 'primary.white',
     fontWeight: 600,
     borderRadius: 40,
     pl: 4,
@@ -83,6 +83,9 @@ export const buttonVariantSx: Record<
     },
     '&:hover': {
       backgroundColor: 'yellow.400',
+    },
+    '&:visited': {
+      color: 'primary.white',
     },
   },
   donate: {
@@ -102,7 +105,7 @@ export const buttonVariantSx: Record<
       },
     },
     '&:hover': {
-      backgroundColor: 'yellow.50',
+      backgroundColor: 'primary.white',
       span: {
         '&::after': {
           background: colors.yellow[400],
