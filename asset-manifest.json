@@ -1,28 +1,34 @@
 {
   "files": {
     "main.css": "/2140-dev.github.io/static/css/main.3842c93b.css",
-    "main.js": "/2140-dev.github.io/static/js/main.e3fc01e9.js",
+    "main.js": "/2140-dev.github.io/static/js/main.1e8ea7bb.js",
     "static/js/488.837ed96c.chunk.js": "/2140-dev.github.io/static/js/488.837ed96c.chunk.js",
     "static/media/josibake.jpg": "/2140-dev.github.io/static/media/josibake.01dbc1990e11a217631a.jpg",
-    "static/media/donate-artwork.svg": "/2140-dev.github.io/static/media/donate-artwork.d0d978d229a01b09b16aaea644d2ebff.svg",
+    "static/media/get-involved-artwork.svg": "/2140-dev.github.io/static/media/get-involved-artwork.d0d978d229a01b09b16aaea644d2ebff.svg",
     "static/media/artwork.svg": "/2140-dev.github.io/static/media/artwork.e847f50286af513eea9931ba5c899987.svg",
+    "static/media/donate-artwork.svg": "/2140-dev.github.io/static/media/donate-artwork.b832c533a0242cd82b8bc4f547771836.svg",
     "static/media/about-artwork.svg": "/2140-dev.github.io/static/media/about-artwork.b3fef6503373249619997729e1683a24.svg",
     "static/media/ruben.jpg": "/2140-dev.github.io/static/media/ruben.152a0d2edd2c8a86b4eb.jpg",
-    "static/media/background.svg": "/2140-dev.github.io/static/media/background.3f866d05f7b238dba227c1e900402ebf.svg",
-    "static/media/logo.svg": "/2140-dev.github.io/static/media/logo.4e31d53d65dc3e1422bdaff21864b3b1.svg",
+    "static/media/background.svg": "/2140-dev.github.io/static/media/background.018c50470f5df0b86019ee66a97d8a33.svg",
+    "static/media/logo.svg": "/2140-dev.github.io/static/media/logo.9276fe548025af0598a348d5f9f18adf.svg",
     "index.html": "/2140-dev.github.io/index.html",
     "static/media/github.svg": "/2140-dev.github.io/static/media/github.2c53786295795e1c281907bf5e4ab428.svg",
     "static/media/email.svg": "/2140-dev.github.io/static/media/email.27e3c1f565047309da344e1049492e6e.svg",
+    "static/media/caret.svg": "/2140-dev.github.io/static/media/caret.e162cad03c013c927c8d1be102b7a7e3.svg",
+    "static/media/underline.svg": "/2140-dev.github.io/static/media/underline.9995e4dfafdce8bbce970036c62933bc.svg",
     "static/media/twitter.svg": "/2140-dev.github.io/static/media/twitter.048b0f9fdb6728aa84b1fe65aa3cc31e.svg",
+    "static/media/strikethrough.svg": "/2140-dev.github.io/static/media/strikethrough.373bed99232f7bb6305a8225ee636e69.svg",
     "static/media/menu-open.svg": "/2140-dev.github.io/static/media/menu-open.9d502b7ac033b2b0293a58a9dd163477.svg",
     "static/media/arrow-right.svg": "/2140-dev.github.io/static/media/arrow-right.b81168405393375048cd62a7ef841c7f.svg",
     "static/media/menu-close.svg": "/2140-dev.github.io/static/media/menu-close.a2d1c137aa51542bd2d945961d9203ba.svg",
+    "static/media/underline-white.svg": "/2140-dev.github.io/static/media/underline-white.14b734cfa5b8ba03f82e9b43904efbdc.svg",
+    "static/media/underline-yellow.svg": "/2140-dev.github.io/static/media/underline-yellow.4366d695f6f352e80b20f918ff59a617.svg",
     "main.3842c93b.css.map": "/2140-dev.github.io/static/css/main.3842c93b.css.map",
-    "main.e3fc01e9.js.map": "/2140-dev.github.io/static/js/main.e3fc01e9.js.map",
+    "main.1e8ea7bb.js.map": "/2140-dev.github.io/static/js/main.1e8ea7bb.js.map",
     "488.837ed96c.chunk.js.map": "/2140-dev.github.io/static/js/488.837ed96c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3842c93b.css",
-    "static/js/main.e3fc01e9.js"
+    "static/js/main.1e8ea7bb.js"
   ]
 }
