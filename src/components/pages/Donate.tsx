@@ -10,6 +10,7 @@ import { SectionTitle } from 'components/core/SectionTitle/SectionTitle';
 import { DONATE_WORDING } from 'constants/wording';
 import { Accordion } from 'components/core/Accordion/Accordion';
 import { Button } from 'components/core/Button/Button';
+import { colors } from 'theme/colors';
 const { page, faqs } = DONATE_WORDING;
 
 export const Donate = () => {
@@ -61,10 +62,16 @@ export const Donate = () => {
               sx={{
                 backgroundColor: 'yellow.200',
                 borderRadius: 200,
+                border: `solid 1px ${colors.yellow[200]}`,
                 display: 'inline-block',
                 p: 3,
                 textDecoration: 'none',
+                transition: 'all 0.2s ease-in',
                 width: '100%',
+                '&:hover': {
+                  backgroundColor: 'primary.white',
+                  borderColor: 'yellow.200',
+                },
               }}
               target="_blank"
               href="https://pay.zaprite.com/pl_7BDIKjO3bZ"
