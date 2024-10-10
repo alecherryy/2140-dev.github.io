@@ -9,7 +9,6 @@ import { MarkdownRender } from 'components/core/MarkdownRenderer/MarkdownRendere
 import { SectionTitle } from 'components/core/SectionTitle/SectionTitle';
 import { DONATE_WORDING } from 'constants/wording';
 import { Accordion } from 'components/core/Accordion/Accordion';
-import { Button } from 'components/core/Button/Button';
 import { colors } from 'theme/colors';
 const { page, faqs } = DONATE_WORDING;
 

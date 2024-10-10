@@ -16,12 +16,36 @@ export const Header = () => {
 
   const handleScroll = debounce(() => {
     const div = ref?.current;
+    const scrollY = window.scrollY;
+
     if (div) {
-      const height = div.getBoundingClientRect().height;
-      if (window.scrollY > height) {
-        setIsSticky(true);
-      } else {
+      if (scrollY < 80) {
+        div.style.position = 'absolute';
+        div.style.transform = 'none';
+        div.style.transition = 'none';
+        div.style.boxShadow = 'none';
+        div.style.background = 'transparent';
         setIsSticky(false);
+      }
+      // set isSticky to true if the user has scrolled more than 80px
+      if (scrollY >= 80 && !isSticky) {
+        const height = div.getBoundingClientRect().height;
+        if (window.scrollY > height) {
+          div.style.position = 'fixed';
+          div.style.transform = 'translateY(-100%)';
+          div.style.background = colors.primary.white;
+
+          setTimeout(() => {
+            div.style.transition = 'all 0.4s cubic-bezier(0.83, 0, 0.17, 1)';
+          }, 100);
+
+          setTimeout(() => {
+            div.style.transform = 'translateY(0)';
+            div.style.boxShadow = '0 0 40px rgba(0, 0, 0, 0.1)';
+          }, 300);
+
+          setIsSticky(true);
+        }
       }
     }
   }, 100);
@@ -43,14 +67,6 @@ export const Header = () => {
         overflow: 'hidden',
         width: '100%',
         zIndex: 999,
-        transition: 'all 0.2s ease-in',
-        ...((isSticky || isMobile) && { position: 'fixed' }),
-        ...(!isMobile &&
-          isSticky && {
-            background: colors.primary.white,
-            color: colors.primary.main,
-            boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
-          }),
       }}
     >
       <Container

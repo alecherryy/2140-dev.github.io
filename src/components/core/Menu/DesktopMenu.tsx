@@ -17,6 +17,7 @@ export const DesktopMenu = ({ items }: MenuProps) => {
       behavior: 'smooth',
     });
   };
+
   return (
     <Box sx={{ display: 'flex', gap: 5, justifyContent: 'flex-end' }}>
       <List sx={desktopMenuSx}>
