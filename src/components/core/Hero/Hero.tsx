@@ -21,7 +21,7 @@ export const Hero = () => {
     <Box sx={wrapperSx}>
       <Container size="lg" sx={containerSx}>
         <Box sx={leftSx}>
-          <Typography variant="h1">
+          <Typography variant="h1" mb={4}>
             <MarkdownRender>{HERO_WORDING.title}</MarkdownRender>
           </Typography>
           <Typography sx={blurbSx} variant="body1">

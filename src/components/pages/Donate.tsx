@@ -28,6 +28,7 @@ export const Donate = () => {
             variant="h1"
             sx={{
               textWrap: 'balance',
+              mb: 4,
               u: {
                 textDecoration: 'none',
                 position: 'relative',
@@ -41,6 +42,7 @@ export const Donate = () => {
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'contain',
                   backgroundImage: `url('${Underline}')`,
+                  zIndex: -1,
                 },
               },
             }}
@@ -88,7 +90,7 @@ export const Donate = () => {
           </figure>
         </Container>
       </Section>
-      <Section>
+      {/* <Section>
         <Container size="md">
           <Grid container spacing={['5rem', '10rem']}>
             <Grid item xs={12} md={6}>
@@ -104,7 +106,7 @@ export const Donate = () => {
             </Grid>
           </Grid>
         </Container>
-      </Section>
+      </Section> */}
     </>
   );
 };

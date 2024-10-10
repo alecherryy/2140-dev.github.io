@@ -19,7 +19,7 @@ export const MENU_ITEMS = [
 export const FOOTER_WORDING = {
   email: 'hello@2140.dev',
   text: `Stichting 2140, Registered at the Chamber of Commerce in Amsterdam under 93717113. <br />All artwork featured on this website was sourced and derived from <a href="http://www.freepik.com/" target="_blank">Freepik</a>; you can see more of the artist's work <a href="https://www.freepik.com/author/fullvector" target="_blank">here</a>.`,
-  gpg: `<b>GPG</b>: XXXX YYYY ZZZZ AAAA BBBB CCCC DDDD EEEE FFFF GGGG`,
+  // gpg: `<b>GPG</b>: XXXX YYYY ZZZZ AAAA BBBB CCCC DDDD EEEE FFFF GGGG`,
 };
 
 export const HERO_WORDING = {
@@ -82,10 +82,9 @@ export const GET_INVOLVED_WORDING = {
 
 export const DONATE_WORDING = {
   page: {
-    title: `Get involved in our <u>mission</u>`,
-    content: `We are committed to the continous development and progress of Bitcoin; this is why, 100% of your donation goes to supporting the Bitcoin contributors at 2140. You can make a one-time donation or set up a recurring payment method. We appreciate your help and support.`,
-    disclaimer:
-      'We support the following payment methods: Bitcoin, Lightning, SEPA & Credit Cards.',
+    title: `Support our <u>mission</u> at 2140`,
+    content: `We are committed to the continous development and progress of Bitcoin; this is why, 100% of your donation goes to supporting the Bitcoin contributors at 2140. You can make a one-time donation or contact us to set up a recurring payment. We appreciate your help and support.`,
+    disclaimer: 'Lightning, onchain, and fiat methods',
   },
   faqs: {
     eyebrow: '1 - Learn more',

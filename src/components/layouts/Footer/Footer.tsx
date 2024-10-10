@@ -74,9 +74,9 @@ export const Footer = () => {
             {FOOTER_WORDING.email}
           </Typography>
         </Link>
-        <Typography variant="caption" component="div" color="primary.dark">
+        {/* <Typography variant="caption" component="div" color="primary.dark">
           <MarkdownRender>{FOOTER_WORDING.gpg}</MarkdownRender>
-        </Typography>
+        </Typography> */}
       </Box>
       <Typography variant="caption" component="div">
         <MarkdownRender>{FOOTER_WORDING.text}</MarkdownRender>
