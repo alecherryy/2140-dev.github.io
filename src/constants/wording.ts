@@ -51,7 +51,7 @@ export const TEAM_WORDING = {
     {
       name: 'josibake',
       role: 'Co-founder, Bitcoin Core contributor',
-      twitter: 'https://twitter.com/josibake?lang=en',
+      twitter: 'https://twitter.com/josibake',
       github: 'https://github.com/josibake',
       image: Josibake,
     },
@@ -59,7 +59,8 @@ export const TEAM_WORDING = {
       name: 'RubenSomsen',
       role: 'Co-founder, Bitcoin Sorcerer',
       twitter: 'https://twitter.com/SomsenRuben',
-      github: 'https://gist.github.com/RubenSomsen',
+      github:
+        'https://gist.github.com/RubenSomsen/c9f0a92493e06b0e29acced61ca9f49a',
       image: Ruben,
     },
   ],
@@ -84,7 +85,7 @@ export const DONATE_WORDING = {
   page: {
     title: `Support our <u>mission</u> at 2140`,
     content: `We are committed to the continous development and progress of Bitcoin; this is why, 100% of your donation goes to supporting the Bitcoin contributors at 2140. You can make a one-time donation or contact us to set up a recurring payment. We appreciate your help and support.`,
-    disclaimer: 'Lightning, onchain, and fiat methods',
+    disclaimer: 'Onchain and fiat methods',
   },
   faqs: {
     eyebrow: '1 - Learn more',
