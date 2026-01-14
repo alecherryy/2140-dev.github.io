@@ -84,7 +84,7 @@ export const GET_INVOLVED_WORDING = {
 export const DONATE_WORDING = {
   page: {
     title: `Support our <u>mission</u> at 2140`,
-    content: `We are committed to the continous development and progress of Bitcoin; this is why, 100% of your donation goes to supporting the Bitcoin contributors at 2140. You can make a one-time donation or contact us to set up a recurring payment. We appreciate your help and support.`,
+    content: `We are committed to the continous development and progress of Bitcoin; this is why, 100% of your donation goes to supporting the Bitcoin contributors at 2140. If you'd like to support our mission by making a donation, you can reach out to us directly. <br /><br /> We appreciate your help and support.`,
     disclaimer: 'Onchain and fiat methods',
   },
   faqs: {

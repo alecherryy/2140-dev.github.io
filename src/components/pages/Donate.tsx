@@ -75,10 +75,10 @@ export const Donate = () => {
                 },
               }}
               target="_blank"
-              href="https://pay.zaprite.com/pl_7BDIKjO3bZ"
+              href="mailto:hello@2140.dev"
             >
               <Typography variant="h4" component="span">
-                Make a donation
+                Contact us
               </Typography>
             </Link>
             <Typography sx={{ mt: 2 }} variant="caption" component="p">
